@@ -1,0 +1,21 @@
+<!-- @dsCard group="Forms" height=300 -->
+<form class="mh-root mh-grid" style="padding:24px;--mh-min:220px" onsubmit="return false">
+  <div class="mh-field">
+    <label class="mh-label" for="p-nama">Nama perusahaan <span class="mh-req" aria-hidden="true">*</span></label>
+    <input class="mh-input" id="p-nama" placeholder="PT Contoh Jaya">
+    <span class="mh-help">Sesuai akta pendirian.</span>
+  </div>
+  <div class="mh-field">
+    <label class="mh-label" for="p-email">Email</label>
+    <input class="mh-input" id="p-email" type="email" value="admin@contoh" aria-invalid="true" aria-describedby="p-email-err">
+    <span class="mh-error-text" id="p-email-err">Format email belum lengkap, contoh: nama@perusahaan.co.id</span>
+  </div>
+  <div class="mh-field">
+    <label class="mh-label" for="p-layanan">Layanan</label>
+    <select class="mh-select" id="p-layanan"><option>Pengembangan web</option><option>Aplikasi mobile</option><option>Integrasi sistem</option></select>
+  </div>
+  <div class="mh-field" style="grid-column:1/-1">
+    <label class="mh-label" for="p-kebutuhan">Kebutuhan</label>
+    <textarea class="mh-textarea" id="p-kebutuhan" placeholder="Ceritakan singkat masalah yang ingin diselesaikan…"></textarea>
+  </div>
+</form>

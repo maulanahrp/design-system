@@ -1,0 +1,46 @@
+<!-- @dsCard height=336 -->
+<div class="cover">
+  <style>
+    .cover { position: relative; width: 960px; height: 336px; background: var(--mh-bg); overflow: hidden; }
+    .cover svg { position: absolute; left: 0; top: 0; }
+    .cover .tile { rx: var(--mh-radius-lg); }
+    .cover .b-navy { fill: var(--mh-color-navy-800); }
+    .cover .b-blue { fill: var(--mh-color-navy-700); }
+    .cover .b-wave { fill: var(--mh-color-navy-500); }
+    .cover .b-cyan { fill: var(--mh-color-cyan-400); }
+    .cover .b-tint { fill: var(--mh-color-cyan-100); }
+    .cover .s-cyan { stroke: var(--mh-color-cyan-400); fill: none; }
+    .cover .s-light { stroke: var(--mh-color-cyan-300); fill: var(--mh-color-navy-800); }
+    .cover .f-node { fill: var(--mh-color-navy-500); }
+    .cover .s-navy { stroke: var(--mh-color-navy-800); fill: none; }
+    .cover .f-navy { fill: var(--mh-color-navy-800); }
+    .cover h1 { position: absolute; left: 48px; top: 164px; margin: 0; font-family: var(--font-heading); font-weight: 700; font-size: 64px; line-height: .95; letter-spacing: -0.02em; color: var(--mh-heading); }
+    .cover p { position: absolute; left: 48px; top: 300px; margin: 0; max-width: 640px; font-family: var(--font-body); font-size: 14px; line-height: 1.4; color: var(--mh-text-muted); }
+  </style>
+  <svg width="960" height="136" viewBox="0 0 960 136" aria-hidden="true">
+    <!--
+      blocks: mh-color-navy-800 384w · mh-color-navy-700 176w · mh-color-navy-500 112w · mh-color-cyan-400 104w · mh-color-cyan-100 56w, all 112h (space-24 + space-4)
+      arrangement: a strip of unequal bands across the top (top-band skeleton: the name is too wide for the 440px zone), heaviest navy first like the logo ring
+      pattern: literal motif, the logo wave with its two nodes, stroked cyan over the navy slab and echoed in navy across the cyan block; the wave + node is what this brand is remembered by
+      scales: gap mh-space-2 (8px), inset mh-space-12 (48px), corners mh-radius-lg (12px), node radii from mh-radius-md
+    -->
+    <rect class="tile b-navy" x="48" y="24" width="384" height="112"/>
+    <rect class="tile b-blue" x="440" y="24" width="176" height="112"/>
+    <rect class="tile b-wave" x="624" y="24" width="112" height="112"/>
+    <rect class="tile b-cyan" x="744" y="24" width="104" height="112"/>
+    <rect class="tile b-tint" x="856" y="24" width="56" height="112"/>
+    <g transform="translate(120 36) scale(1.3)">
+      <path class="s-cyan" d="M13.5 42.2 L31 35 M89 37 L106.5 27.8" stroke-width="4" stroke-linecap="round"/>
+      <path class="s-cyan" d="M30 36 C 38 10, 52 2, 59 18 C 65 32, 70 54, 80 50 C 84 48, 86 42, 88 38" stroke-width="11" stroke-linecap="round"/>
+      <circle class="f-node" cx="33" cy="34" r="8"/>
+      <circle class="f-node" cx="86" cy="38.5" r="8"/>
+      <circle class="s-light" cx="9" cy="44" r="5.5" stroke-width="3.2"/>
+      <circle class="s-light" cx="111" cy="25.5" r="5.5" stroke-width="3.2"/>
+    </g>
+    <path class="s-navy" d="M760 104 C 776 56, 796 52, 804 80 C 810 100, 820 108, 834 92" stroke-width="8" stroke-linecap="round"/>
+    <circle class="f-navy" cx="760" cy="104" r="7"/>
+    <circle class="f-navy" cx="834" cy="92" r="7"/>
+  </svg>
+  <h1>MaulanaHRP<br>Design System</h1>
+  <p>Bahasa visual untuk web, aplikasi, deck, dan dokumen MaulanaHRP Tech Solution.</p>
+</div>

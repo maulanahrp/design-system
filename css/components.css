@@ -42,6 +42,9 @@
   color: var(--mh-heading);
   line-height: var(--mh-font-line-height-snug);
   margin: 0 0 var(--mh-space-3);
+  text-wrap: balance;
+  overflow-wrap: break-word;
+  hyphens: auto;
 }
 .mh-root :where(h1) { font-size: var(--mh-font-size-4xl); line-height: var(--mh-font-line-height-tight); letter-spacing: var(--mh-font-letter-spacing-tight); }
 .mh-root :where(h2) { font-size: var(--mh-font-size-3xl); letter-spacing: var(--mh-font-letter-spacing-tight); }

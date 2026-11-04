@@ -1,0 +1,30 @@
+{
+  "$comment": "ID aset logo yang sudah diunggah ke Design System claude.ai (https://claude.ai/artifact/6Cdm5QFvAaBMQ3BWYoKRnJ). Unggah ulang bila file logo berubah, lalu perbarui blob & size di sini.",
+  "createdAt": "2026-11-04T10:30:00Z",
+  "groups": {
+    "Logos": {
+      "tile": "l",
+      "files": [
+        { "name": "maulanahrp-horizontal-color.svg", "blob": "d14e78a20ccd6c07a5fc2bee3bbfdc7a", "size": 12327, "type": "image/svg+xml" },
+        { "name": "maulanahrp-horizontal-white.svg", "blob": "941dc4bdbe4852fd2dea9bc70d969ed2", "size": 11811, "type": "image/svg+xml" },
+        { "name": "maulanahrp-horizontal-navy.svg", "blob": "502c38dc07242188f0ff1269983b0c49", "size": 11811, "type": "image/svg+xml" },
+        { "name": "maulanahrp-horizontal-black.svg", "blob": "637cad10abffec194528d6a214934052", "size": 11811, "type": "image/svg+xml" },
+        { "name": "maulanahrp-badge-color.svg", "blob": "880ef600b9f4938b2ba2d03f386592f2", "size": 13532, "type": "image/svg+xml" },
+        { "name": "maulanahrp-badge-white.svg", "blob": "bb107fac9b1f881dfb8cc71577a5209f", "size": 13016, "type": "image/svg+xml" },
+        { "name": "maulanahrp-badge.png", "blob": "9b77feea0b2b5680cd0102570df4f9e6", "size": 464162, "type": "image/png" },
+        { "name": "maulanahrp-horizontal-color.png", "blob": "04de77f1b64a537097574ebb83613a7c", "size": 27871, "type": "image/png" }
+      ]
+    },
+    "Marks": {
+      "tile": "m",
+      "files": [
+        { "name": "maulanahrp-mark-color.svg", "blob": "6ebc46cffa6a5dc0fa6195a6be7f9851", "size": 1381, "type": "image/svg+xml" },
+        { "name": "maulanahrp-mark-navy.svg", "blob": "90dcfe82d13e577ee8496f975066a384", "size": 865, "type": "image/svg+xml" },
+        { "name": "maulanahrp-mark-white.svg", "blob": "1469b83a9d4e71654cd6e9256e459513", "size": 865, "type": "image/svg+xml" },
+        { "name": "maulanahrp-mark-black.svg", "blob": "d6286cca5688b3cda907ba5b8e36f098", "size": 865, "type": "image/svg+xml" },
+        { "name": "maulanahrp-app-icon.svg", "blob": "a5246f6c0d1594c469f569ee18eed84b", "size": 982, "type": "image/svg+xml" },
+        { "name": "icon-512.png", "blob": "66230c0671b5de063fcfa0bf49ae032d", "size": 13044, "type": "image/png" }
+      ]
+    }
+  }
+}

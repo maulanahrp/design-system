@@ -7,7 +7,8 @@
   "scripts": {
     "build": "node scripts/build-tokens.mjs",
     "test": "node scripts/build-tokens.mjs && node scripts/check-contrast.mjs",
-    "build:logos": "node scripts/build-logos.mjs"
+    "build:logos": "node scripts/build-logos.mjs",
+    "build:claude-ds": "node scripts/build-claude-ds.mjs"
   },
   "devDependencies": {
     "@fontsource/montserrat": "^5.0.19",

@@ -59,3 +59,13 @@ Jangan mengedit `css/tokens.css` atau `dist/` secara manual; keduanya dibangkitk
 - Warna brand diambil dari sampel logo raster. Ganti dengan kode resmi bila tersedia.
 - Mark gelombang SVG adalah interpretasi vektor dari logo asli (`assets/logo/maulanahrp-badge-original.webp`).
 - Data perusahaan di template (alamat, NPWP, rekening, kontak) masih berupa placeholder `[kurung siku]`.
+
+## Design System di claude.ai
+Versi claude.ai: https://claude.ai/artifact/6Cdm5QFvAaBMQ3BWYoKRnJ (privat; bagikan lewat menu Share di halamannya).
+Dipakai Claude saat membuat deck, desain, dan halaman bermerek MaulanaHRP.
+
+Repo ini tetap **sumber utama**. Untuk sinkron setelah mengubah token/komponen:
+```bash
+npm run build:claude-ds -- <folder-output>   # menghasilkan <folder-output>/project/
+```
+lalu publish folder `project/` itu ke artifact di atas. Konten khusus claude.ai (brand book, README & preview komponen, cover) ada di `claude-ds/`. ID aset logo yang sudah diunggah ada di `scripts/claude-ds-assets.json`.
