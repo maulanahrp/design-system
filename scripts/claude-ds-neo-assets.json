@@ -2,26 +2,26 @@
   "$comment": "Aset logo di Design System claude.ai 'MaulanaHRP Neubrutalism' (https://claude.ai/artifact/GQvrDjXNbAgA5PinPo1mo3), disalin dari Design System utama. 'remap' mengganti ID blob utama di preview komponen yang dipakai ulang.",
   "createdAt": "2026-11-04T11:00:00Z",
   "remap": {
-    "d14e78a20ccd6c07a5fc2bee3bbfdc7a": "17f657f430096819d064ad4369038894"
+    "0877ef31147bdd2568af08f5358c3178": "4b4953cf911943c541b2e3a0b891e6c2"
   },
   "groups": {
     "Logos": {
       "tile": "l",
       "files": [
-        { "name": "maulanahrp-horizontal-color.svg", "blob": "17f657f430096819d064ad4369038894", "size": 12327, "type": "image/svg+xml" },
-        { "name": "maulanahrp-horizontal-navy.svg", "blob": "a3fc36753a05ed1660c65257b720897c", "size": 11811, "type": "image/svg+xml" },
-        { "name": "maulanahrp-horizontal-white.svg", "blob": "09849bf5812acc8d021928d947283d31", "size": 11811, "type": "image/svg+xml" },
-        { "name": "maulanahrp-horizontal-black.svg", "blob": "1e573e162ccc0a11ad74e294a1493706", "size": 11811, "type": "image/svg+xml" },
-        { "name": "maulanahrp-badge-color.svg", "blob": "50f7693ab32346314ef3acf7237bf7b3", "size": 13532, "type": "image/svg+xml" }
+        { "name": "maulanahrp-horizontal-color.svg", "blob": "4b4953cf911943c541b2e3a0b891e6c2", "size": 33121, "type": "image/svg+xml" },
+        { "name": "maulanahrp-horizontal-navy.svg", "blob": "805fa67a1d844e7f40e62f2c95351837", "size": 25832, "type": "image/svg+xml" },
+        { "name": "maulanahrp-horizontal-white.svg", "blob": "ebcd534c51956a656cecfa5402b0d25c", "size": 25832, "type": "image/svg+xml" },
+        { "name": "maulanahrp-horizontal-black.svg", "blob": "804cec196f66b3f576cee0e0ea57f81d", "size": 25832, "type": "image/svg+xml" },
+        { "name": "maulanahrp-badge-color.svg", "blob": "53465d5a54cd151ff55187e9ffd0392c", "size": 83978, "type": "image/svg+xml" }
       ]
     },
     "Marks": {
       "tile": "m",
       "files": [
-        { "name": "maulanahrp-mark-color.svg", "blob": "2e11b31d232ebc719a000d65808080f8", "size": 1381, "type": "image/svg+xml" },
-        { "name": "maulanahrp-mark-navy.svg", "blob": "9a7ceb59439aa944486650a445d2c015", "size": 865, "type": "image/svg+xml" },
-        { "name": "maulanahrp-mark-white.svg", "blob": "eaee68d3cf1f538e0f5ec9866c2f9863", "size": 865, "type": "image/svg+xml" },
-        { "name": "maulanahrp-app-icon.svg", "blob": "00fd6668415a91e7a20c20c12d6792f8", "size": 982, "type": "image/svg+xml" }
+        { "name": "maulanahrp-mark-color.svg", "blob": "bef5a192dfa9da39c303549072ab16e0", "size": 14702, "type": "image/svg+xml" },
+        { "name": "maulanahrp-mark-navy.svg", "blob": "c5d4374be3eda215170f0380d90938c3", "size": 7393, "type": "image/svg+xml" },
+        { "name": "maulanahrp-mark-white.svg", "blob": "019b031689bc615d078230948508bb5a", "size": 7393, "type": "image/svg+xml" },
+        { "name": "maulanahrp-app-icon.svg", "blob": "857135664ff98626d48d6fba270b1734", "size": 7517, "type": "image/svg+xml" }
       ]
     }
   }
