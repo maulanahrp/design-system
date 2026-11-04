@@ -1,0 +1,11 @@
+{
+  "name": "@maulanahrp/design-system",
+  "version": "0.1.0",
+  "private": true,
+  "description": "Design system MaulanaHRP Tech Solution",
+  "type": "module",
+  "scripts": {
+    "build": "node scripts/build-tokens.mjs",
+    "test": "node scripts/build-tokens.mjs && node scripts/check-contrast.mjs"
+  }
+}
