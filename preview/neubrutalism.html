@@ -1,0 +1,195 @@
+<!doctype html>
+<html lang="id" data-style="neubrutalism">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Neubrutalism — MaulanaHRP</title>
+  <link rel="icon" href="../assets/favicon/favicon.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Montserrat:wght@700;800&family=JetBrains+Mono:wght@500;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../css/tokens.css">
+  <link rel="stylesheet" href="../css/components.css">
+  <link rel="stylesheet" href="../css/themes/neubrutalism.css">
+  <link rel="stylesheet" href="preview.css">
+  <style>
+    .demo { border-top: 2px solid var(--mh-neo-ink); }
+    .demo__box { border: 2px solid var(--mh-neo-ink); }
+    .hero-neo { display: grid; gap: var(--mh-space-8); grid-template-columns: 1.3fr 1fr; align-items: center; padding-block: var(--mh-space-16); }
+    .hero-neo h1 { font-size: clamp(2.5rem, 6vw, 4.5rem); line-height: 1; margin: var(--mh-space-4) 0; }
+    .hero-neo__art { position: relative; min-height: 320px; }
+    .hero-neo__art > * { position: absolute; }
+    .palette { display: grid; grid-template-columns: repeat(auto-fill, minmax(min(140px, 100%), 1fr)); gap: var(--mh-space-4); }
+    .palette .mh-neo-block { padding: var(--mh-space-4); min-height: 110px; display: flex; flex-direction: column; justify-content: flex-end; font-size: var(--mh-font-size-sm); box-shadow: var(--mh-shadow-md); }
+    .palette code { border: 0; background: none; padding: 0; color: inherit; }
+    .social { width: min(100%, 420px); aspect-ratio: 1; container-type: inline-size; }
+    .social__in { --u: calc(100cqw / 1080); position: relative; height: 100%; background: var(--mh-color-neo-sky); border: 3px solid var(--mh-color-neo-ink); box-shadow: 8px 8px 0 0 var(--mh-color-neo-ink); overflow: hidden; padding: calc(var(--u) * 80); display: flex; flex-direction: column; color: var(--mh-color-neo-ink); }
+    .social__in h3 { font-size: calc(var(--u) * 104); line-height: 1; color: var(--mh-color-neo-ink); margin: auto 0 calc(var(--u) * 40); }
+    .social__in ol { margin: 0; padding-left: 1.2em; font-size: calc(var(--u) * 40); font-weight: 600; display: grid; gap: calc(var(--u) * 12); }
+    .social__in img { height: calc(var(--u) * 64); align-self: flex-start; }
+    .social__tag { position: absolute; right: calc(var(--u) * 60); top: calc(var(--u) * 70); font-size: calc(var(--u) * 34) !important; }
+    .slide-neo { width: min(100%, 720px); aspect-ratio: 16 / 9; container-type: inline-size; }
+    .slide-neo__in { --u: calc(100cqw / 1920); height: 100%; background: var(--mh-color-neo-paper); border: 3px solid var(--mh-color-neo-ink); box-shadow: 8px 8px 0 0 var(--mh-color-neo-ink); padding: calc(var(--u) * 110) calc(var(--u) * 128); display: grid; grid-template-columns: 1.1fr 1fr; gap: calc(var(--u) * 80); align-items: center; color: var(--mh-color-neo-ink); position: relative; }
+    .slide-neo__in h3 { font-size: calc(var(--u) * 96); line-height: 1; color: var(--mh-color-neo-ink); margin: calc(var(--u) * 32) 0; }
+    .slide-neo__in p { font-size: calc(var(--u) * 32); margin: 0; }
+    .slide-neo__kpi { display: grid; gap: calc(var(--u) * 28); }
+    .slide-neo__kpi > div { border: calc(var(--u) * 5) solid var(--mh-color-neo-ink); box-shadow: calc(var(--u) * 12) calc(var(--u) * 12) 0 0 var(--mh-color-neo-ink); padding: calc(var(--u) * 28) calc(var(--u) * 40); font-size: calc(var(--u) * 28); border-radius: calc(var(--u) * 16); }
+    .slide-neo__kpi strong { display: block; font-family: var(--mh-font-family-heading); font-weight: 800; font-size: calc(var(--u) * 84); line-height: 1; }
+    .slide-neo__sticker { font-size: calc(var(--u) * 26) !important; }
+    .slide-neo__foot { position: absolute; left: calc(var(--u) * 128); bottom: calc(var(--u) * 44); height: calc(var(--u) * 44); }
+    @media (max-width: 767px) { .hero-neo { grid-template-columns: 1fr; padding-block: var(--mh-space-10); } .hero-neo__art { min-height: 260px; } }
+  </style>
+</head>
+<body class="mh-root">
+  <header class="mh-navbar">
+    <div class="mh-container mh-navbar__inner">
+      <a class="mh-navbar__brand" href="../index.html" aria-label="Beranda design system">
+        <img class="logo-light" src="../assets/logo/maulanahrp-horizontal-color.svg" alt="MaulanaHRP Tech Solution">
+        <img class="logo-dark" src="../assets/logo/maulanahrp-horizontal-white.svg" alt="" aria-hidden="true">
+      </a>
+      <ul class="mh-navbar__links">
+        <li><a href="../index.html">Utama</a></li>
+        <li><a href="components.html">Komponen</a></li>
+        <li><a href="neubrutalism.html" aria-current="page">Neubrutalism</a></li>
+      </ul>
+      <div class="theme-switch" role="group" aria-label="Tema">
+        <button class="mh-btn mh-btn--ghost mh-btn--sm" data-set-theme="light">Terang</button>
+        <button class="mh-btn mh-btn--ghost mh-btn--sm" data-set-theme="dark">Gelap</button>
+        <button class="mh-btn mh-btn--ghost mh-btn--sm" data-set-theme="auto">Sistem</button>
+      </div>
+    </div>
+  </header>
+
+  <main class="mh-container">
+    <!-- Hero contoh landing kampanye -->
+    <section class="hero-neo">
+      <div>
+        <span class="mh-overline">Design system sekunder · Neubrutalism</span>
+        <h1>Sistem digital yang <span class="mh-neo-highlight">berani</span> tampil beda.</h1>
+        <p class="mh-lead">Gaya MaulanaHRP untuk kampanye, media sosial, event, dan produk. Komponen yang sama dengan gaya utama; cukup tambahkan <code>data-style="neubrutalism"</code>.</p>
+        <div class="mh-row" style="--mh-gap: var(--mh-space-4); margin-top: var(--mh-space-6)">
+          <a class="mh-btn mh-btn--lg" href="#komponen">Lihat komponen</a>
+          <a class="mh-btn mh-btn--secondary mh-btn--lg" href="#batas">Kapan dipakai?</a>
+        </div>
+      </div>
+      <div class="hero-neo__art" aria-hidden="true">
+        <div class="mh-neo-block mh-neo-block--cyan" style="left:4%; top:6%; width:62%; height:58%"></div>
+        <div class="mh-neo-block mh-neo-block--sun" style="right:2%; top:0; width:38%; height:36%"></div>
+        <div class="mh-neo-block mh-neo-block--white" style="left:22%; bottom:2%; width:70%; padding:20px; display:grid; place-items:center">
+          <img src="../assets/logo/maulanahrp-horizontal-color.svg" alt="" style="width:88%">
+        </div>
+        <span class="mh-neo-sticker" style="right:6%; top:42%">Konsultasi gratis!</span>
+      </div>
+    </section>
+
+    <section class="demo" id="batas">
+      <h2>Kapan memakai gaya ini</h2>
+      <div class="mh-grid" style="--mh-min: 280px">
+        <div class="mh-neo-block mh-neo-block--mint">
+          <h3>Pakai Neubrutalism untuk</h3>
+          <ul style="margin:0; padding-left:1.2em; line-height:1.8">
+            <li>Konten media sosial &amp; iklan</li><li>Landing page kampanye/promo</li><li>Event, workshop, webinar</li><li>Produk/aplikasi untuk startup &amp; UMKM muda</li><li>Deck pitching yang santai</li>
+          </ul>
+        </div>
+        <div class="mh-neo-block mh-neo-block--white">
+          <h3>Tetap pakai gaya utama untuk</h3>
+          <ul style="margin:0; padding-left:1.2em; line-height:1.8">
+            <li>Penawaran harga, invoice, kontrak, surat</li><li>Website korporat &amp; profil perusahaan</li><li>Klien enterprise/pemerintah</li><li>Dashboard data yang padat</li><li>Kop, kartu nama, stempel</li>
+          </ul>
+        </div>
+      </div>
+      <p class="mh-muted mh-small" style="margin-top: var(--mh-space-4)">Jangan mencampur kedua gaya dalam satu halaman, kecuali satu section kampanye di dalam halaman gaya utama.</p>
+    </section>
+
+    <section class="demo">
+      <h2>Palet</h2>
+      <p class="mh-muted">Warna brand yang sama, dipakai sebagai blok datar. Teks di atas blok selalu tinta <code>#0C1A38</code> (kecuali blue &amp; ink).</p>
+      <div class="palette">
+        <div class="mh-neo-block mh-neo-block--cyan"><strong>Cyan</strong><code>#68C0D2</code></div>
+        <div class="mh-neo-block mh-neo-block--sky"><strong>Sky</strong><code>#A8E1EB</code></div>
+        <div class="mh-neo-block mh-neo-block--sun"><strong>Sun</strong><code>#FFC93C</code></div>
+        <div class="mh-neo-block mh-neo-block--mint"><strong>Mint</strong><code>#7FE0AE</code></div>
+        <div class="mh-neo-block" style="background:var(--mh-color-neo-coral)"><strong>Coral</strong><code>#FF8A7A</code></div>
+        <div class="mh-neo-block mh-neo-block--blue"><strong>Blue</strong><code>#3B6CA7</code></div>
+        <div class="mh-neo-block mh-neo-block--ink"><strong>Ink</strong><code>#0C1A38</code></div>
+        <div class="mh-neo-block mh-neo-block--white"><strong>Paper</strong><code>#F3F8FB</code></div>
+      </div>
+    </section>
+
+    <section class="demo" id="komponen">
+      <h2>Komponen</h2>
+      <div class="demo__box mh-stack" style="--mh-gap: var(--mh-space-8)">
+        <div class="mh-row" style="--mh-gap: var(--mh-space-4)">
+          <button class="mh-btn">Primary</button>
+          <button class="mh-btn mh-btn--secondary">Secondary</button>
+          <button class="mh-btn mh-btn--accent">Accent</button>
+          <button class="mh-btn mh-btn--ghost">Ghost</button>
+          <button class="mh-btn mh-btn--danger">Hapus</button>
+          <button class="mh-btn mh-btn--sm">Kecil</button>
+          <button class="mh-btn" disabled>Disabled</button>
+        </div>
+        <div class="mh-grid" style="--mh-min: 220px">
+          <div class="mh-field"><label class="mh-label" for="n-nama">Nama</label><input class="mh-input" id="n-nama" placeholder="Nama lengkap"></div>
+          <div class="mh-field"><label class="mh-label" for="n-email">Email</label><input class="mh-input" id="n-email" value="kamu@contoh" aria-invalid="true" aria-describedby="n-err"><span class="mh-error-text" id="n-err">Format email belum lengkap.</span></div>
+          <div class="mh-field"><label class="mh-label" for="n-paket">Paket</label><select class="mh-select" id="n-paket"><option>Starter</option><option>Growth</option></select></div>
+          <div class="mh-stack" style="--mh-gap: var(--mh-space-3); padding-top: var(--mh-space-6)">
+            <label class="mh-check"><input type="checkbox" checked> Ikut webinar</label>
+            <label class="mh-switch"><input type="checkbox" role="switch" checked> Pengingat WA</label>
+          </div>
+        </div>
+        <div class="mh-row"><span class="mh-badge">Baru</span><span class="mh-badge mh-badge--accent">Promo</span><span class="mh-badge mh-badge--success">Lunas</span><span class="mh-badge mh-badge--warning">Menunggu</span><span class="mh-badge mh-badge--danger">Habis</span><span class="mh-badge mh-badge--neutral">Draf</span></div>
+        <div class="mh-grid" style="--mh-min: 220px">
+          <article class="mh-card mh-card--interactive"><span class="mh-icon-tile" aria-hidden="true"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M13 2 3 14h9l-1 8 10-12h-9l1-8z"/></svg></span><h3 style="margin-top:16px">Website kilat</h3><p class="mh-small mh-muted">Live dalam 14 hari, siap jualan.</p></article>
+          <article class="mh-card"><div class="mh-stat__value">120+</div><div class="mh-stat__label">UMKM sudah go-digital</div><hr class="mh-wave-line"></article>
+          <article class="mh-card mh-card--brand"><span class="mh-overline">Paket unggulan</span><h3 style="margin-top:12px">Go Digital UMKM</h3><p class="mh-small">Website + kasir + laporan.</p><button class="mh-btn mh-btn--accent mh-btn--sm">Ambil paket</button></article>
+          <article class="mh-card mh-card--inverse"><h3>Ada pertanyaan?</h3><p class="mh-small">Balasan dalam 1 hari kerja.</p><button class="mh-btn mh-btn--accent mh-btn--sm">Chat kami</button></article>
+        </div>
+        <div class="mh-alert mh-alert--success" role="status"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="m8 12 3 3 5-6"/></svg><div><strong class="mh-alert__title">Pendaftaran berhasil</strong>Link webinar dikirim ke email kamu.</div></div>
+        <div class="mh-alert mh-alert--warning" role="status"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M12 3 2 20h20L12 3z"/><path d="M12 10v4M12 17h.01"/></svg><div><strong class="mh-alert__title">Kuota tinggal 8 kursi</strong>Daftar sebelum Jumat.</div></div>
+        <div class="mh-row" style="--mh-gap: var(--mh-space-6); align-items:center">
+          <div class="mh-progress" style="flex:1; min-width:200px" role="progressbar" aria-valuenow="72" aria-valuemin="0" aria-valuemax="100" aria-label="Kuota terisi"><div class="mh-progress__bar" style="--value: 72%"></div></div>
+          <span class="mh-avatar">MH</span>
+          <div class="mh-toast" role="status">Tersimpan!</div>
+        </div>
+        <div class="mh-tabs" role="tablist"><button class="mh-tab" role="tab" aria-selected="true">Semua</button><button class="mh-tab" role="tab" aria-selected="false">Web</button><button class="mh-tab" role="tab" aria-selected="false">Mobile</button></div>
+        <div class="mh-row" style="justify-content:space-between">
+          <ul class="mh-pagination"><li><a href="#komponen">1</a></li><li><a href="#komponen" aria-current="page">2</a></li><li><a href="#komponen">3</a></li></ul>
+          <ol class="mh-breadcrumb"><li><a href="#komponen">Event</a></li><li aria-current="page">Webinar Nov</li></ol>
+        </div>
+        <div class="mh-table-wrap"><table class="mh-table"><thead><tr><th>Paket</th><th>Status</th><th class="mh-right">Harga (Rp)</th></tr></thead><tbody>
+          <tr><td>Starter</td><td><span class="mh-badge mh-badge--success">Tersedia</span></td><td class="mh-right mh-num">4.900.000</td></tr>
+          <tr><td>Growth</td><td><span class="mh-badge mh-badge--accent">Promo</span></td><td class="mh-right mh-num">12.500.000</td></tr>
+        </tbody></table></div>
+      </div>
+    </section>
+
+    <section class="demo">
+      <h2>Contoh: post media sosial &amp; slide</h2>
+      <p class="mh-muted">Post 1080×1080 dan slide 16:9 memakai blok datar, border tebal, dan bayangan keras. Satu stiker per desain.</p>
+      <div class="mh-row" style="--mh-gap: var(--mh-space-10); align-items:flex-start">
+        <div class="social"><div class="social__in">
+          <img src="../assets/logo/maulanahrp-horizontal-navy.svg" alt="MaulanaHRP">
+          <span class="mh-neo-sticker social__tag">Tips</span>
+          <h3>3 tanda bisnismu butuh sistem digital</h3>
+          <ol><li>Stok sering selisih</li><li>Laporan makan berhari-hari</li><li>Data tersebar di banyak file</li></ol>
+        </div></div>
+        <div class="slide-neo"><div class="slide-neo__in">
+          <div>
+            <span class="mh-neo-sticker slide-neo__sticker">Hasil nyata</span>
+            <h3>Laporan 4 hari jadi tiap pagi.</h3>
+            <p>Otomatisasi laporan stok untuk CV Contoh Makmur.</p>
+          </div>
+          <div class="slide-neo__kpi">
+            <div style="background:var(--mh-color-neo-cyan)"><strong>−70%</strong>waktu input data</div>
+            <div style="background:var(--mh-color-neo-sun)"><strong>1 hari</strong>susun laporan</div>
+          </div>
+          <img class="slide-neo__foot" src="../assets/logo/maulanahrp-horizontal-navy.svg" alt="">
+        </div></div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="mh-container demo-footer mh-small mh-muted">MaulanaHRP · Neubrutalism v0.1</footer>
+  <script src="theme.js"></script>
+</body>
+</html>

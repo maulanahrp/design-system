@@ -11,6 +11,7 @@ assets/favicon/     favicon.svg, favicon-32.png, apple-touch-icon.png, icon-512.
 tokens/tokens.json  SUMBER TUNGGAL design tokens (warna, font, spacing, radius, shadow, tema)
 css/tokens.css      CSS variables --mh-* (dibangkitkan, jangan edit manual)
 css/components.css  Komponen UI (.mh-*)
+css/themes/         Tema Neubrutalism (dibangkitkan dari tokens/neubrutalism.json + themes/)
 dist/               tokens.resolved.json untuk JavaScript/aplikasi
 docs/               Panduan (Markdown, Bahasa Indonesia)
 preview/            Halaman preview komponen
@@ -27,6 +28,7 @@ scripts/            Build tokens, cek kontras WCAG, build logo
 6. [Komponen UI](docs/06-komponen.md)
 7. [Deck presentasi](docs/07-deck.md)
 8. [Dokumen bisnis](docs/08-dokumen.md)
+9. [Design system sekunder: Neubrutalism](docs/09-neubrutalism.md)
 
 ## Ringkasan brand
 | | |
@@ -45,6 +47,9 @@ scripts/            Build tokens, cek kontras WCAG, build logo
   <button class="mh-btn">Konsultasi gratis</button>
 </body>
 ```
+
+## Design system sekunder: Neubrutalism
+Gaya berani untuk kampanye, media sosial, event, dan produk. Komponennya sama; tambahkan `css/themes/neubrutalism.css` dan `data-style="neubrutalism"`. Batas pemakaian ada di [docs/09-neubrutalism.md](docs/09-neubrutalism.md); preview di `preview/neubrutalism.html`.
 
 ## Mengubah token
 ```bash
