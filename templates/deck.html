@@ -1,0 +1,165 @@
+<!doctype html>
+<html lang="id" data-theme="light">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Template Deck — MaulanaHRP</title>
+  <link rel="icon" href="../assets/favicon/favicon.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Montserrat:wght@600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../css/tokens.css">
+  <link rel="stylesheet" href="deck.css">
+</head>
+<body style="margin:0">
+  <!-- Motif gelombang: dipakai ulang lewat <use href="#wave"> -->
+  <svg width="0" height="0" style="position:absolute" aria-hidden="true">
+    <symbol id="wave" viewBox="0 0 1100 420">
+      <path d="M40 330 L230 260" stroke="currentColor" stroke-width="14" stroke-linecap="round" fill="none"/>
+      <path d="M250 255 C 330 40, 470 -10, 540 150 C 600 290, 650 420, 760 380 C 800 365, 830 330, 850 300" stroke="currentColor" stroke-width="64" stroke-linecap="round" fill="none"/>
+      <path d="M860 300 L1050 200" stroke="currentColor" stroke-width="14" stroke-linecap="round" fill="none"/>
+      <circle cx="250" cy="255" r="44" fill="currentColor"/><circle cx="850" cy="300" r="44" fill="currentColor"/>
+      <circle cx="40" cy="330" r="28" fill="none" stroke="currentColor" stroke-width="14"/><circle cx="1060" cy="195" r="28" fill="none" stroke="currentColor" stroke-width="14"/>
+    </symbol>
+  </svg>
+
+  <main class="deck">
+    <!-- 1. COVER -->
+    <p class="slide-label">01 · Cover</p>
+    <section class="slide slide--gradient"><div class="slide__in">
+      <svg class="wave-motif" style="color:#fff; opacity:.22"><use href="#wave"/></svg>
+      <img src="../assets/logo/maulanahrp-horizontal-white.svg" alt="MaulanaHRP Tech Solution" style="height:calc(var(--u)*84); align-self:flex-start">
+      <div class="center-v" style="max-width:70%">
+        <p class="kicker">Proposal solusi · November 2026</p>
+        <h1>Transformasi Digital Operasional PT Contoh Jaya</h1>
+        <p class="muted" style="font-size:calc(var(--u)*34); margin-top:calc(var(--u)*32)">Sistem inventori &amp; laporan otomatis terintegrasi</p>
+      </div>
+      <div class="slide__foot"><span>Disiapkan untuk: Direksi PT Contoh Jaya</span><span>Rahasia · Hanya untuk penerima</span></div>
+    </div></section>
+
+    <!-- 2. AGENDA -->
+    <p class="slide-label">02 · Agenda</p>
+    <section class="slide"><div class="slide__in">
+      <span class="slide__accent"></span>
+      <div class="cols" style="--n:2; grid-template-columns: 1fr 1.4fr">
+        <div><p class="kicker">Agenda</p><h2>Yang akan kita bahas hari ini</h2></div>
+        <ol class="agenda">
+          <li>Tantangan saat ini</li><li>Solusi yang diusulkan</li><li>Dampak bisnis</li><li>Tahapan &amp; jadwal</li><li>Investasi</li>
+        </ol>
+      </div>
+      <div class="slide__foot"><img src="../assets/logo/maulanahrp-horizontal-color.svg" alt=""><span>02</span></div>
+    </div></section>
+
+    <!-- 3. SECTION DIVIDER -->
+    <p class="slide-label">03 · Pembatas bagian</p>
+    <section class="slide slide--navy"><div class="slide__in">
+      <svg class="wave-motif" style="color:var(--mh-color-cyan-400)"><use href="#wave"/></svg>
+      <div class="center-v">
+        <p class="kicker">Bagian 01</p>
+        <h1 style="font-size:calc(var(--u)*110)">Tantangan<br>saat ini</h1>
+      </div>
+      <div class="slide__foot"><img src="../assets/logo/maulanahrp-horizontal-white.svg" alt=""><span>03</span></div>
+    </div></section>
+
+    <!-- 4. KONTEN: judul = kesimpulan -->
+    <p class="slide-label">04 · Konten + gambar</p>
+    <section class="slide"><div class="slide__in">
+      <span class="slide__accent"></span>
+      <p class="kicker">Tantangan</p>
+      <h2>Proses manual menyita 40% waktu tim gudang</h2>
+      <div class="cols" style="grid-template-columns: 1.2fr 1fr">
+        <ul class="bullets">
+          <li>Stok dicatat di 3 spreadsheet berbeda, sering <strong>tidak sinkron</strong></li>
+          <li>Laporan bulanan butuh <strong>4 hari kerja</strong> untuk disusun</li>
+          <li>Selisih stok fisik vs. sistem rata-rata <strong>7%</strong> per kuartal</li>
+        </ul>
+        <div class="img-ph">Foto / ilustrasi 4:3</div>
+      </div>
+      <div class="slide__foot"><img src="../assets/logo/maulanahrp-horizontal-color.svg" alt=""><span>04</span></div>
+    </div></section>
+
+    <!-- 5. PERBANDINGAN -->
+    <p class="slide-label">05 · Perbandingan / opsi</p>
+    <section class="slide"><div class="slide__in">
+      <span class="slide__accent"></span>
+      <p class="kicker">Solusi</p>
+      <h2>Satu sistem menggantikan tiga spreadsheet</h2>
+      <div class="cols">
+        <div class="box"><span class="tag">Sebelum</span><h3>Manual &amp; terpisah</h3><ul class="bullets muted"><li>Input ganda di tiap gudang</li><li>Laporan disusun manual</li><li>Data terlambat 1–2 minggu</li></ul></div>
+        <div class="box box--navy"><span class="tag">Sesudah</span><h3>Terpusat &amp; real-time</h3><ul class="bullets" style="color:rgba(255,255,255,.9)"><li>Scan barcode, langsung tercatat</li><li>Laporan terkirim otomatis pukul 07.00</li><li>Dashboard stok bisa dibuka dari HP</li></ul></div>
+      </div>
+      <div class="slide__foot"><img src="../assets/logo/maulanahrp-horizontal-color.svg" alt=""><span>05</span></div>
+    </div></section>
+
+    <!-- 6. KPI -->
+    <p class="slide-label">06 · Angka kunci (KPI)</p>
+    <section class="slide"><div class="slide__in">
+      <span class="slide__accent"></span>
+      <p class="kicker">Dampak bisnis</p>
+      <h2>Estimasi dampak dalam 6 bulan pertama</h2>
+      <div class="cols center-v" style="--n:3">
+        <div><div class="kpi__value">−70<small>%</small></div><div class="kpi__bar"></div><p class="kpi__label">Waktu input data stok</p></div>
+        <div><div class="kpi__value">1<small> hari</small></div><div class="kpi__bar"></div><p class="kpi__label">Penyusunan laporan (dari 4 hari)</p></div>
+        <div><div class="kpi__value">&lt;1<small>%</small></div><div class="kpi__bar"></div><p class="kpi__label">Target selisih stok per kuartal</p></div>
+      </div>
+      <div class="slide__foot"><img src="../assets/logo/maulanahrp-horizontal-color.svg" alt=""><span>Sumber: estimasi internal berdasarkan audit proses Okt 2026 · 06</span></div>
+    </div></section>
+
+    <!-- 7. GRAFIK -->
+    <p class="slide-label">07 · Grafik</p>
+    <section class="slide"><div class="slide__in">
+      <span class="slide__accent"></span>
+      <div class="cols" style="grid-template-columns: 1fr 1.6fr; align-items:center">
+        <div><p class="kicker">Tren</p><h2 style="max-width:100%">Volume transaksi tumbuh 2× dalam setahun</h2><p class="muted">Pertumbuhan ini tidak lagi tertangani proses manual. Sorot hanya satu batang yang menjadi pesan utama.</p></div>
+        <div>
+          <div class="bars">
+            <div class="bar" style="--h:38%"><span>1,2rb</span><i></i></div>
+            <div class="bar" style="--h:47%"><span>1,5rb</span><i></i></div>
+            <div class="bar" style="--h:60%"><span>1,9rb</span><i></i></div>
+            <div class="bar bar--hl" style="--h:78%"><span>2,5rb</span><i></i></div>
+          </div>
+          <div class="bars-x"><span>Q4 2025</span><span>Q1 2026</span><span>Q2 2026</span><span>Q3 2026</span></div>
+        </div>
+      </div>
+      <div class="slide__foot"><img src="../assets/logo/maulanahrp-horizontal-color.svg" alt=""><span>07</span></div>
+    </div></section>
+
+    <!-- 8. TAHAPAN -->
+    <p class="slide-label">08 · Proses / timeline</p>
+    <section class="slide"><div class="slide__in">
+      <span class="slide__accent"></span>
+      <p class="kicker">Tahapan</p>
+      <h2>Live dalam 10 minggu, bertahap tanpa mengganggu operasional</h2>
+      <div class="steps" style="--n:4">
+        <div class="step"><div class="step__dot">1</div><h3>Analisis</h3><p>Minggu 1–2. Audit proses &amp; data.</p></div>
+        <div class="step"><div class="step__dot">2</div><h3>Desain</h3><p>Minggu 3–4. Alur &amp; prototipe disetujui.</p></div>
+        <div class="step"><div class="step__dot">3</div><h3>Pembangunan</h3><p>Minggu 5–8. Rilis per modul, uji di 1 gudang.</p></div>
+        <div class="step"><div class="step__dot">4</div><h3>Go-live</h3><p>Minggu 9–10. Migrasi data &amp; pelatihan.</p></div>
+      </div>
+      <div class="slide__foot"><img src="../assets/logo/maulanahrp-horizontal-color.svg" alt=""><span>08</span></div>
+    </div></section>
+
+    <!-- 9. KUTIPAN -->
+    <p class="slide-label">09 · Kutipan / testimoni</p>
+    <section class="slide" style="background:var(--mh-color-cyan-50)"><div class="slide__in">
+      <div class="center-v" style="max-width:78%">
+        <p class="quote" style="color:var(--mh-color-navy-800)">Laporan yang dulu makan 4 hari sekarang ada di email setiap pagi. Tim kami bisa fokus melayani pelanggan.</p>
+        <p class="muted" style="margin-top:calc(var(--u)*40)"><strong>Rina Wijaya</strong> · Manajer Operasional, CV Contoh Makmur</p>
+      </div>
+      <div class="slide__foot"><img src="../assets/logo/maulanahrp-horizontal-color.svg" alt=""><span>09</span></div>
+    </div></section>
+
+    <!-- 10. PENUTUP -->
+    <p class="slide-label">10 · Penutup / kontak</p>
+    <section class="slide slide--navy"><div class="slide__in">
+      <svg class="wave-motif" style="color:var(--mh-color-cyan-400)"><use href="#wave"/></svg>
+      <div class="center-v" style="max-width:65%">
+        <p class="kicker">Langkah berikutnya</p>
+        <h1 style="font-size:calc(var(--u)*80)">Mari mulai dengan sesi analisis gratis 2 jam.</h1>
+        <p class="muted" style="margin-top:calc(var(--u)*40); font-size:calc(var(--u)*30)">hello@maulanahrp.id &nbsp;·&nbsp; +62 812-0000-0000 &nbsp;·&nbsp; maulanahrp.id</p>
+      </div>
+      <div class="slide__foot"><img src="../assets/logo/maulanahrp-horizontal-white.svg" alt="MaulanaHRP Tech Solution" style="height:calc(var(--u)*56)"><span>Terima kasih</span></div>
+    </div></section>
+  </main>
+</body>
+</html>
