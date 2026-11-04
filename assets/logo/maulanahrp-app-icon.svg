@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="512" height="512" role="img" aria-label="MaulanaHRP">
+  <title>MaulanaHRP</title>
+  <rect width="512" height="512" rx="112" fill="#1C366B"/>
+  <g transform="translate(56.32 136.19) scale(3.3280)">
+    <path d="M13.5 42.2 L31 35" stroke="#FFFFFF" stroke-width="4" stroke-linecap="round" fill="none"/>
+    <path d="M89 37 L106.5 27.8" stroke="#FFFFFF" stroke-width="4" stroke-linecap="round" fill="none"/>
+    <path d="M30 36 C 38 10, 52 2, 59 18 C 65 32, 70 54, 80 50 C 84 48, 86 42, 88 38" stroke="#FFFFFF" stroke-width="11" stroke-linecap="round" fill="none"/>
+    <circle cx="33" cy="34" r="7.5" fill="#FFFFFF"/>
+    <circle cx="86" cy="38.5" r="7.5" fill="#FFFFFF"/>
+    <circle cx="9" cy="44" r="5.5" fill="none" stroke="#FFFFFF" stroke-width="3.2"/>
+    <circle cx="111" cy="25.5" r="5.5" fill="none" stroke="#FFFFFF" stroke-width="3.2"/>
+  </g>
+</svg>

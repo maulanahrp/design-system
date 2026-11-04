@@ -1,0 +1,20 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 120 72" width="120" height="72" role="img" aria-label="MaulanaHRP">
+  <title>MaulanaHRP</title>
+  <defs>
+    <linearGradient id="mh-wave" x1="30" y1="6" x2="86" y2="56" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#68C0D2"/><stop offset=".55" stop-color="#3B6CA7"/><stop offset="1" stop-color="#274B91"/>
+    </linearGradient>
+    <linearGradient id="mh-line" x1="84" y1="40" x2="112" y2="20" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#3B6CA7"/><stop offset="1" stop-color="#5BAACB"/>
+    </linearGradient>
+  </defs>
+  <g>
+    <path d="M13.5 42.2 L31 35" stroke="#3B6CA7" stroke-width="4" stroke-linecap="round" fill="none"/>
+    <path d="M89 37 L106.5 27.8" stroke="url(#mh-line)" stroke-width="4" stroke-linecap="round" fill="none"/>
+    <path d="M30 36 C 38 10, 52 2, 59 18 C 65 32, 70 54, 80 50 C 84 48, 86 42, 88 38" stroke="url(#mh-wave)" stroke-width="11" stroke-linecap="round" fill="none"/>
+    <circle cx="33" cy="34" r="7.5" fill="#3B6CA7"/>
+    <circle cx="86" cy="38.5" r="7.5" fill="#3B6CA7"/>
+    <circle cx="9" cy="44" r="5.5" fill="#FFFFFF" stroke="#3B6CA7" stroke-width="3.2"/>
+    <circle cx="111" cy="25.5" r="5.5" fill="#FFFFFF" stroke="#5BAACB" stroke-width="3.2"/>
+  </g>
+</svg>
