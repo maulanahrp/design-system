@@ -73,4 +73,7 @@ Repo ini tetap **sumber utama**. Untuk sinkron setelah mengubah token/komponen:
 ```bash
 npm run build:claude-ds -- <folder-output>   # menghasilkan <folder-output>/project/
 ```
-lalu publish folder `project/` itu ke artifact di atas. Konten khusus claude.ai (brand book, README & preview komponen, cover) ada di `claude-ds/`. ID aset logo yang sudah diunggah ada di `scripts/claude-ds-assets.json`.
+lalu publish folder `project/` itu ke artifact di atas.
+
+Versi Neubrutalism: https://claude.ai/artifact/GQvrDjXNbAgA5PinPo1mo3 (build: `npm run build:claude-ds-neo -- <folder-output>`; konten khusus di `claude-ds-neo/`, ID aset di `scripts/claude-ds-neo-assets.json`).
+ Konten khusus claude.ai (brand book, README & preview komponen, cover) ada di `claude-ds/`. ID aset logo yang sudah diunggah ada di `scripts/claude-ds-assets.json`.

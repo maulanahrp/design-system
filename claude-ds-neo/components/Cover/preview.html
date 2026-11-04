@@ -1,0 +1,54 @@
+<!-- @dsCard height=336 -->
+<div class="cover">
+  <style>
+    .cover { position: relative; width: 960px; height: 336px; background: var(--mh-bg); overflow: hidden; }
+    .cover svg { position: absolute; left: 0; top: 0; }
+    .cover .tile { rx: var(--mh-card-radius); }
+    .cover .ink-fill { fill: var(--mh-neo-ink); }
+    .cover .ink-line { stroke: var(--mh-neo-ink); }
+    .cover .b-cyan { fill: var(--mh-color-neo-cyan); }
+    .cover .b-sun { fill: var(--mh-color-neo-sun); }
+    .cover .b-sky { fill: var(--mh-color-neo-sky); }
+    .cover .b-mint { fill: var(--mh-color-neo-mint); }
+    .cover .stripe { fill: var(--mh-color-neo-cyan); }
+    .cover .wave { stroke: var(--mh-color-neo-ink); fill: none; }
+    .cover .node { fill: var(--mh-color-neo-ink); }
+    .cover .ring { stroke: var(--mh-color-neo-ink); fill: var(--mh-color-neo-cyan); }
+    .cover h1 { position: absolute; left: 48px; top: 164px; margin: 0; font-family: var(--font-heading); font-weight: 800; font-size: 64px; line-height: .95; letter-spacing: -0.03em; color: var(--mh-heading); }
+    .cover p { position: absolute; left: 48px; top: 300px; margin: 0; max-width: 640px; font-family: var(--font-body); font-size: 14px; line-height: 1.4; color: var(--mh-text-muted); }
+  </style>
+  <svg width="960" height="144" viewBox="0 0 960 144" aria-hidden="true">
+    <!--
+      blocks: mh-color-neo-cyan 320w · mh-color-neo-sun 144w · mh-color-neo-sky 200w · mh-color-neo-mint 144w, 104h, each with a mh-neo-ink offset (mh-btn-shadow-hover doubled: 8px) and mh-border-width ×1.5 outline
+      arrangement: a strip of unequal bordered slabs across the top (top-band skeleton: "Neubrutalism" is too wide for the 440px zone), cyan slab leading like the primary button fill
+      pattern: loud/bold poster row → diagonal stripes at mh-space-4 pitch on the sky slab (the striped progress bar), plus the brand wave stroked in ink on the cyan slab; flat blocks + hard shadows are what this style is remembered by
+      scales: gap mh-space-4 (16px), inset mh-space-12 (48px), corners mh-card-radius (10px), shadow offset 8px, stroke 3px
+    -->
+    <defs>
+      <pattern id="neo-stripes" width="16" height="16" patternUnits="userSpaceOnUse" patternTransform="rotate(45)">
+        <rect class="stripe" width="8" height="16"/>
+      </pattern>
+      <clipPath id="neo-sky-clip"><rect x="544" y="24" width="200" height="104" rx="10"/></clipPath>
+    </defs>
+    <rect class="tile ink-fill" x="56" y="32" width="320" height="104"/>
+    <rect class="tile ink-fill" x="392" y="32" width="144" height="104"/>
+    <rect class="tile ink-fill" x="552" y="32" width="200" height="104"/>
+    <rect class="tile ink-fill" x="768" y="32" width="144" height="104"/>
+    <rect class="tile b-cyan ink-line" x="48" y="24" width="320" height="104" stroke-width="3"/>
+    <rect class="tile b-sun ink-line" x="384" y="24" width="144" height="104" stroke-width="3"/>
+    <rect class="tile b-sky" x="544" y="24" width="200" height="104"/>
+    <rect clip-path="url(#neo-sky-clip)" x="544" y="24" width="200" height="104" fill="url(#neo-stripes)"/>
+    <rect class="tile ink-line" x="544" y="24" width="200" height="104" stroke-width="3" fill="none"/>
+    <rect class="tile b-mint ink-line" x="760" y="24" width="144" height="104" stroke-width="3"/>
+    <g transform="translate(128 34) scale(1.3)">
+      <path class="wave" d="M13.5 42.2 L31 35 M89 37 L106.5 27.8" stroke-width="4" stroke-linecap="round"/>
+      <path class="wave" d="M30 36 C 38 10, 52 2, 59 18 C 65 32, 70 54, 80 50 C 84 48, 86 42, 88 38" stroke-width="11" stroke-linecap="round"/>
+      <circle class="node" cx="33" cy="34" r="8"/>
+      <circle class="node" cx="86" cy="38.5" r="8"/>
+      <circle class="ring" cx="9" cy="44" r="5.5" stroke-width="3.2"/>
+      <circle class="ring" cx="111" cy="25.5" r="5.5" stroke-width="3.2"/>
+    </g>
+  </svg>
+  <h1>MaulanaHRP<br>Neubrutalism</h1>
+  <p>Gaya berani MaulanaHRP untuk kampanye, media sosial, event, dan produk.</p>
+</div>

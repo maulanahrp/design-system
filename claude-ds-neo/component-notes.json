@@ -1,0 +1,12 @@
+{
+  "Button": "primary berisi cyan `mh-neo-fill` dengan teks ink, border ink, dan bayangan keras 4px yang naik saat hover lalu hilang saat ditekan. `--accent` = kuning sun, `--danger` = coral (teks ink), `--sm` memakai font label monospace.",
+  "Field": "border ink 2px; saat fokus input mendapat bayangan keras 4px. Input invalid berbayang merah.",
+  "Selection": "checkbox persegi bersudut 3px, tercentang = cyan dengan centang ink. Switch bertrack ber-border dengan thumb ink.",
+  "Card": "border ink + bayangan keras 6px. `--brand` menjadi blok cyan datar (tanpa gradasi) dengan teks ink; ikon tile berlatar kuning sun. Untuk blok warna bebas, pakai `.mh-neo-block`.",
+  "Badge": "stiker kotak (radius 4px), font label monospace kapital, fill warna penuh (sky/sun/mint/coral/putih) dengan teks ink.",
+  "Alert": "border penuh 2px + bayangan 4px (tanpa border kiri tebal). Progress berupa bar bergaris cyan/sky setinggi 16px.",
+  "Table": "border ink, header berlatar sky dengan font label monospace; hover baris kuning lembut.",
+  "Navbar": "latar solid tanpa blur, border bawah ink; halaman aktif = kotak kuning sun ber-border. Breadcrumb aktif distabilo kuning.",
+  "Tabs": "tab berbentuk kotak; tab aktif berisi cyan dengan border ink. Pagination aktif cyan dengan bayangan keras.",
+  "Dialog": "border 3px ink dan bayangan keras 8px."
+}
