@@ -1,0 +1,63 @@
+<!doctype html>
+<html lang="id" data-theme="light">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Template Kartu Nama — MaulanaHRP</title>
+  <link rel="icon" href="../assets/favicon/favicon.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Montserrat:wght@600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../css/tokens.css">
+  <style>
+    *, *::before, *::after { box-sizing: border-box; }
+    body { margin: 0; padding: 32px 16px; background: var(--mh-color-neutral-100); font-family: var(--mh-font-family-body); color: var(--mh-color-neutral-900); }
+    .sheet { display: flex; flex-wrap: wrap; gap: 24px; justify-content: center; }
+    .label { width: 100%; text-align: center; font: 600 12px/1.4 var(--mh-font-family-body); color: var(--mh-color-neutral-600); letter-spacing: .06em; text-transform: uppercase; }
+    /* 90 × 55 mm, + bleed 3 mm saat dicetak profesional */
+    .card { width: 90mm; height: 55mm; max-width: 100%; position: relative; overflow: hidden; border-radius: 2mm; box-shadow: var(--mh-shadow-lg); background: #fff; -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+    .front { background: var(--mh-color-navy-800); color: #fff; display: grid; place-items: center; }
+    .front img.logo { width: 62mm; position: relative; }
+    .front svg { position: absolute; right: -8mm; bottom: -6mm; width: 60mm; height: auto; color: var(--mh-color-cyan-400); opacity: .16; }
+    .back { padding: 7mm 7mm 6mm; display: flex; flex-direction: column; }
+    .back .name { font-family: var(--mh-font-family-heading); font-weight: 700; font-size: 13pt; color: var(--mh-color-navy-800); line-height: 1.15; }
+    .back .role { font-size: 7.5pt; font-weight: 600; letter-spacing: .1em; text-transform: uppercase; color: var(--mh-color-cyan-700); margin-top: 1mm; }
+    .back .wave { width: 12mm; height: .9mm; border-radius: 1mm; background: var(--mh-color-gradient-wave); margin: 3.5mm 0; }
+    .back ul { list-style: none; margin: 0; padding: 0; font-size: 7.5pt; line-height: 1.7; color: var(--mh-color-neutral-700); }
+    .back ul b { display: inline-block; width: 5mm; color: var(--mh-color-navy-500); font-weight: 600; }
+    .back img.mark { position: absolute; right: 6mm; bottom: 6mm; width: 16mm; }
+    .back .band { position: absolute; left: 0; top: 0; bottom: 0; width: 1.6mm; background: var(--mh-color-gradient-brand); }
+    @media print { @page { size: A4; margin: 15mm; } body { background: none; padding: 0; } .label { display: none; } .card { box-shadow: none; outline: .1mm dashed #ccc; } }
+  </style>
+</head>
+<body>
+  <!-- symbol motif gelombang -->
+  <svg width="0" height="0" style="position:absolute" aria-hidden="true">
+    <symbol id="wave" viewBox="0 0 1100 420">
+      <path d="M250 255 C 330 40, 470 -10, 540 150 C 600 290, 650 420, 760 380 C 800 365, 830 330, 850 300" stroke="currentColor" stroke-width="64" stroke-linecap="round" fill="none"/>
+      <path d="M40 330 L230 260 M860 300 L1050 200" stroke="currentColor" stroke-width="14" stroke-linecap="round"/>
+      <circle cx="250" cy="255" r="44" fill="currentColor"/><circle cx="850" cy="300" r="44" fill="currentColor"/>
+    </symbol>
+  </svg>
+  <div class="sheet">
+    <p class="label">Kartu nama 90 × 55 mm · depan &amp; belakang · teks dalam [kurung siku] wajib diganti</p>
+    <div class="card front">
+      <svg viewBox="0 0 1100 420"><use href="#wave"/></svg>
+      <img class="logo" src="../assets/logo/maulanahrp-horizontal-white.svg" alt="MaulanaHRP Tech Solution">
+    </div>
+    <div class="card back">
+      <span class="band"></span>
+      <div class="name">[Nama Lengkap]</div>
+      <div class="role">[Jabatan]</div>
+      <div class="wave"></div>
+      <ul>
+        <li><b>T</b>[+62 8xx-xxxx-xxxx]</li>
+        <li><b>E</b>[nama@domain]</li>
+        <li><b>W</b>[website]</li>
+        <li><b>A</b>[Alamat singkat, Kota]</li>
+      </ul>
+      <img class="mark" src="../assets/logo/maulanahrp-mark-color.svg" alt="">
+    </div>
+  </div>
+</body>
+</html>
