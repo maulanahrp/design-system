@@ -1,0 +1,308 @@
+/* MaulanaHRP — tema Neubrutalism (design system sekunder)
+ * DIBANGKITKAN OTOMATIS dari tokens/neubrutalism.json + themes/neubrutalism/components.css.
+ * Pakai: muat SETELAH tokens.css & components.css, lalu pasang data-style="neubrutalism"
+ * di <html> (seluruh halaman) atau di elemen mana pun (hanya bagian itu).
+ */
+
+[data-style="neubrutalism"] {
+  --mh-color-neo-ink: #0C1A38;
+  --mh-color-neo-paper: #F3F8FB;
+  --mh-color-neo-white: #FFFFFF;
+  --mh-color-neo-navy: #1C366B;
+  --mh-color-neo-cyan: #68C0D2;
+  --mh-color-neo-sky: #A8E1EB;
+  --mh-color-neo-blue: #3B6CA7;
+  --mh-color-neo-sun: #FFC93C;
+  --mh-color-neo-sun-soft: #FFF0C2;
+  --mh-color-neo-mint: #7FE0AE;
+  --mh-color-neo-mint-soft: #D4F7E3;
+  --mh-color-neo-coral: #FF8A7A;
+  --mh-color-neo-coral-soft: #FFDDD8;
+  --mh-color-neo-ink-2: #13244A;
+  --mh-color-neo-ink-3: #1E3366;
+  --mh-font-family-label: 'JetBrains Mono', ui-monospace, 'SFMono-Regular', Menlo, Consolas, monospace;
+
+  /* Semantic & bentuk — light */
+  --mh-bg: var(--mh-color-neo-paper);
+  --mh-bg-subtle: #E3F1F6;
+  --mh-bg-muted: #D2EAF1;
+  --mh-surface: var(--mh-color-neo-white);
+  --mh-surface-raised: var(--mh-color-neo-white);
+  --mh-surface-inverse: var(--mh-color-neo-ink);
+  --mh-border: var(--mh-color-neo-ink);
+  --mh-border-strong: var(--mh-color-neo-ink);
+  --mh-text: var(--mh-color-neo-ink);
+  --mh-text-muted: #2E3B55;
+  --mh-text-subtle: #4A5872;
+  --mh-text-inverse: var(--mh-color-neo-paper);
+  --mh-heading: var(--mh-color-neo-ink);
+  --mh-primary: var(--mh-color-neo-navy);
+  --mh-primary-hover: var(--mh-color-neo-ink);
+  --mh-primary-active: var(--mh-color-neo-ink);
+  --mh-primary-subtle: var(--mh-color-neo-sky);
+  --mh-on-primary: var(--mh-color-neo-white);
+  --mh-accent: var(--mh-color-neo-sun);
+  --mh-accent-strong: #7A4E00;
+  --mh-accent-subtle: var(--mh-color-neo-sun-soft);
+  --mh-on-accent: var(--mh-color-neo-ink);
+  --mh-link: var(--mh-color-neo-navy);
+  --mh-success: #0E5C36;
+  --mh-success-subtle: var(--mh-color-neo-mint-soft);
+  --mh-warning: #6E4600;
+  --mh-warning-subtle: var(--mh-color-neo-sun-soft);
+  --mh-danger: #9C1F17;
+  --mh-danger-subtle: var(--mh-color-neo-coral-soft);
+  --mh-info: var(--mh-color-neo-navy);
+  --mh-info-subtle: #D6F0F5;
+  --mh-neo-fill: var(--mh-color-neo-cyan);
+  --mh-neo-fill-hover: var(--mh-color-neo-sky);
+  --mh-on-neo-fill: var(--mh-color-neo-ink);
+  --mh-neo-ink: var(--mh-color-neo-ink);
+  --mh-border-width: 2px;
+  --mh-border-color: var(--mh-color-neo-ink);
+  --mh-control-radius: 6px;
+  --mh-card-radius: 10px;
+  --mh-control-height: 2.75rem;
+  --mh-card-shadow: 6px 6px 0 0 var(--mh-color-neo-ink);
+  --mh-card-shadow-hover: 9px 9px 0 0 var(--mh-color-neo-ink);
+  --mh-btn-shadow: 4px 4px 0 0 var(--mh-color-neo-ink);
+  --mh-btn-shadow-hover: 6px 6px 0 0 var(--mh-color-neo-ink);
+  --mh-btn-shadow-active: 0 0 0 0 var(--mh-color-neo-ink);
+  --mh-btn-lift: 2px;
+  --mh-btn-press: 4px;
+  --mh-btn-weight: 700;
+  --mh-heading-weight: 800;
+  --mh-overlay: rgba(12, 26, 56, 0.6);
+  --mh-focus-ring: 0 0 0 3px var(--mh-color-neo-paper), 0 0 0 6px var(--mh-color-neo-ink);
+  --mh-shadow-sm: 2px 2px 0 0 var(--mh-color-neo-ink);
+  --mh-shadow-md: 4px 4px 0 0 var(--mh-color-neo-ink);
+  --mh-shadow-lg: 8px 8px 0 0 var(--mh-color-neo-ink);
+}
+
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"])[data-style="neubrutalism"],
+  :root:not([data-theme="light"]) [data-style="neubrutalism"] {
+    --mh-bg: var(--mh-color-neo-ink);
+    --mh-bg-subtle: var(--mh-color-neo-ink-2);
+    --mh-bg-muted: var(--mh-color-neo-ink-3);
+    --mh-surface: var(--mh-color-neo-ink-2);
+    --mh-surface-raised: var(--mh-color-neo-ink-3);
+    --mh-surface-inverse: var(--mh-color-neo-paper);
+    --mh-border: var(--mh-color-neo-paper);
+    --mh-border-strong: var(--mh-color-neo-paper);
+    --mh-text: var(--mh-color-neo-paper);
+    --mh-text-muted: #C9D6E6;
+    --mh-text-subtle: #A9B8CC;
+    --mh-text-inverse: var(--mh-color-neo-ink);
+    --mh-heading: var(--mh-color-neo-white);
+    --mh-primary: var(--mh-color-neo-sky);
+    --mh-primary-hover: var(--mh-color-neo-white);
+    --mh-primary-active: var(--mh-color-neo-white);
+    --mh-primary-subtle: var(--mh-color-neo-ink-3);
+    --mh-on-primary: var(--mh-color-neo-ink);
+    --mh-accent: var(--mh-color-neo-sun);
+    --mh-accent-strong: var(--mh-color-neo-sun);
+    --mh-accent-subtle: #3A3214;
+    --mh-on-accent: var(--mh-color-neo-ink);
+    --mh-link: var(--mh-color-neo-sky);
+    --mh-success: var(--mh-color-neo-mint);
+    --mh-success-subtle: #103A2A;
+    --mh-warning: var(--mh-color-neo-sun);
+    --mh-warning-subtle: #3A3214;
+    --mh-danger: var(--mh-color-neo-coral);
+    --mh-danger-subtle: #45201F;
+    --mh-info: var(--mh-color-neo-sky);
+    --mh-info-subtle: var(--mh-color-neo-ink-3);
+    --mh-neo-fill: var(--mh-color-neo-cyan);
+    --mh-neo-fill-hover: var(--mh-color-neo-sky);
+    --mh-on-neo-fill: var(--mh-color-neo-ink);
+    --mh-neo-ink: var(--mh-color-neo-paper);
+    --mh-border-color: var(--mh-color-neo-paper);
+    --mh-card-shadow: 6px 6px 0 0 var(--mh-color-neo-cyan);
+    --mh-card-shadow-hover: 9px 9px 0 0 var(--mh-color-neo-cyan);
+    --mh-btn-shadow: 4px 4px 0 0 var(--mh-color-neo-paper);
+    --mh-btn-shadow-hover: 6px 6px 0 0 var(--mh-color-neo-paper);
+    --mh-btn-shadow-active: 0 0 0 0 var(--mh-color-neo-paper);
+    --mh-overlay: rgba(0, 0, 0, 0.7);
+    --mh-focus-ring: 0 0 0 3px var(--mh-color-neo-ink), 0 0 0 6px var(--mh-color-neo-sun);
+    --mh-shadow-sm: 2px 2px 0 0 var(--mh-color-neo-cyan);
+    --mh-shadow-md: 4px 4px 0 0 var(--mh-color-neo-cyan);
+    --mh-shadow-lg: 8px 8px 0 0 var(--mh-color-neo-cyan);
+  }
+}
+
+:root[data-theme="dark"][data-style="neubrutalism"],
+:root[data-theme="dark"] [data-style="neubrutalism"] {
+  --mh-bg: var(--mh-color-neo-ink);
+  --mh-bg-subtle: var(--mh-color-neo-ink-2);
+  --mh-bg-muted: var(--mh-color-neo-ink-3);
+  --mh-surface: var(--mh-color-neo-ink-2);
+  --mh-surface-raised: var(--mh-color-neo-ink-3);
+  --mh-surface-inverse: var(--mh-color-neo-paper);
+  --mh-border: var(--mh-color-neo-paper);
+  --mh-border-strong: var(--mh-color-neo-paper);
+  --mh-text: var(--mh-color-neo-paper);
+  --mh-text-muted: #C9D6E6;
+  --mh-text-subtle: #A9B8CC;
+  --mh-text-inverse: var(--mh-color-neo-ink);
+  --mh-heading: var(--mh-color-neo-white);
+  --mh-primary: var(--mh-color-neo-sky);
+  --mh-primary-hover: var(--mh-color-neo-white);
+  --mh-primary-active: var(--mh-color-neo-white);
+  --mh-primary-subtle: var(--mh-color-neo-ink-3);
+  --mh-on-primary: var(--mh-color-neo-ink);
+  --mh-accent: var(--mh-color-neo-sun);
+  --mh-accent-strong: var(--mh-color-neo-sun);
+  --mh-accent-subtle: #3A3214;
+  --mh-on-accent: var(--mh-color-neo-ink);
+  --mh-link: var(--mh-color-neo-sky);
+  --mh-success: var(--mh-color-neo-mint);
+  --mh-success-subtle: #103A2A;
+  --mh-warning: var(--mh-color-neo-sun);
+  --mh-warning-subtle: #3A3214;
+  --mh-danger: var(--mh-color-neo-coral);
+  --mh-danger-subtle: #45201F;
+  --mh-info: var(--mh-color-neo-sky);
+  --mh-info-subtle: var(--mh-color-neo-ink-3);
+  --mh-neo-fill: var(--mh-color-neo-cyan);
+  --mh-neo-fill-hover: var(--mh-color-neo-sky);
+  --mh-on-neo-fill: var(--mh-color-neo-ink);
+  --mh-neo-ink: var(--mh-color-neo-paper);
+  --mh-border-color: var(--mh-color-neo-paper);
+  --mh-card-shadow: 6px 6px 0 0 var(--mh-color-neo-cyan);
+  --mh-card-shadow-hover: 9px 9px 0 0 var(--mh-color-neo-cyan);
+  --mh-btn-shadow: 4px 4px 0 0 var(--mh-color-neo-paper);
+  --mh-btn-shadow-hover: 6px 6px 0 0 var(--mh-color-neo-paper);
+  --mh-btn-shadow-active: 0 0 0 0 var(--mh-color-neo-paper);
+  --mh-overlay: rgba(0, 0, 0, 0.7);
+  --mh-focus-ring: 0 0 0 3px var(--mh-color-neo-ink), 0 0 0 6px var(--mh-color-neo-sun);
+  --mh-shadow-sm: 2px 2px 0 0 var(--mh-color-neo-cyan);
+  --mh-shadow-md: 4px 4px 0 0 var(--mh-color-neo-cyan);
+  --mh-shadow-lg: 8px 8px 0 0 var(--mh-color-neo-cyan);
+}
+
+/* ---------- Penyesuaian komponen gaya Neubrutalism ----------
+ * Sumber tangan (bukan generate). Selector diawali [data-style="neubrutalism"]
+ * sehingga hanya aktif di dalam tema ini. Nilai warna & bentuk datang dari token.
+ */
+[data-style="neubrutalism"] {
+  --mh-btn-font: var(--mh-font-family-heading);
+}
+[data-style="neubrutalism"].mh-root,
+[data-style="neubrutalism"] .mh-root { background: var(--mh-bg); }
+
+/* Tipografi: heading lebih berat & rapat, label monospace */
+[data-style="neubrutalism"] :where(h1, h2, h3, h4, .mh-display) { letter-spacing: -0.03em; }
+[data-style="neubrutalism"] .mh-overline {
+  display: inline-block; font-family: var(--mh-font-family-label); letter-spacing: 0.04em;
+  color: var(--mh-on-accent); background: var(--mh-accent);
+  border: var(--mh-border-width) solid var(--mh-neo-ink); border-radius: 4px; padding: 0.2em 0.6em;
+}
+[data-style="neubrutalism"] :where(code, kbd) { border: var(--mh-border-width) solid var(--mh-neo-ink); background: var(--mh-surface); }
+[data-style="neubrutalism"] :where(a):not(.mh-btn) { text-decoration-thickness: 2px; text-underline-offset: 4px; }
+[data-style="neubrutalism"] .mh-stat__value { font-weight: 800; }
+
+/* Button: fill datar + border tinta + bayangan keras yang "ditekan" */
+[data-style="neubrutalism"] .mh-btn { --_bg: var(--mh-neo-fill); --_fg: var(--mh-on-neo-fill); --_bd: var(--mh-neo-ink); letter-spacing: 0; }
+[data-style="neubrutalism"] .mh-btn:hover { --_bg: var(--mh-neo-fill-hover); --_bd: var(--mh-neo-ink); }
+[data-style="neubrutalism"] .mh-btn:active { --_bg: var(--mh-neo-fill-hover); }
+[data-style="neubrutalism"] .mh-btn--secondary { --_bg: var(--mh-surface); --_fg: var(--mh-text); }
+[data-style="neubrutalism"] .mh-btn--secondary:hover, [data-style="neubrutalism"] .mh-btn--secondary:active { --_bg: var(--mh-bg-muted); }
+[data-style="neubrutalism"] .mh-btn--accent { --_bg: var(--mh-accent); --_fg: var(--mh-on-accent); }
+[data-style="neubrutalism"] .mh-btn--accent:hover, [data-style="neubrutalism"] .mh-btn--accent:active { --_bg: var(--mh-color-neo-sun-soft); --_fg: var(--mh-color-neo-ink); }
+[data-style="neubrutalism"] .mh-btn--danger { --_bg: var(--mh-color-neo-coral); --_fg: var(--mh-color-neo-ink); filter: none; }
+[data-style="neubrutalism"] .mh-btn--danger:hover, [data-style="neubrutalism"] .mh-btn--danger:active { --_bg: var(--mh-color-neo-coral-soft); filter: none; }
+[data-style="neubrutalism"] .mh-btn--ghost { --_bg: transparent; --_fg: var(--mh-text); --_bd: transparent; box-shadow: none; }
+[data-style="neubrutalism"] .mh-btn--ghost:hover, [data-style="neubrutalism"] .mh-btn--ghost:active { --_bg: var(--mh-bg-muted); --_bd: var(--mh-neo-ink); box-shadow: none; }
+[data-style="neubrutalism"] .mh-btn--sm { font-family: var(--mh-font-family-label); }
+
+/* Form */
+[data-style="neubrutalism"] :is(.mh-input, .mh-select, .mh-textarea) { border-color: var(--mh-neo-ink); }
+[data-style="neubrutalism"] :is(.mh-input, .mh-select, .mh-textarea):hover { border-color: var(--mh-neo-ink); background: var(--mh-bg-subtle); }
+[data-style="neubrutalism"] :is(.mh-input, .mh-select, .mh-textarea):focus { border-color: var(--mh-neo-ink); box-shadow: var(--mh-btn-shadow); background: var(--mh-surface); }
+[data-style="neubrutalism"] :is(.mh-input, .mh-select, .mh-textarea)[aria-invalid="true"] { border-color: var(--mh-danger); box-shadow: 4px 4px 0 0 var(--mh-danger); }
+[data-style="neubrutalism"] .mh-label { font-weight: var(--mh-font-weight-semibold); }
+[data-style="neubrutalism"] .mh-check input { border: var(--mh-border-width) solid var(--mh-neo-ink); border-radius: 3px; }
+[data-style="neubrutalism"] .mh-check input[type="radio"] { border-radius: 50%; }
+[data-style="neubrutalism"] .mh-check input:checked { background: var(--mh-neo-fill); border-color: var(--mh-neo-ink); }
+[data-style="neubrutalism"] .mh-check input[type="checkbox"]:checked::after { border-color: var(--mh-color-neo-ink); }
+[data-style="neubrutalism"] .mh-check input[type="radio"]:checked::after { background: var(--mh-color-neo-ink); }
+[data-style="neubrutalism"] .mh-switch input { border: var(--mh-border-width) solid var(--mh-neo-ink); background: var(--mh-surface); height: 1.625rem; width: 2.75rem; }
+[data-style="neubrutalism"] .mh-switch input::after { background: var(--mh-neo-ink); box-shadow: none; width: 1rem; height: 1rem; left: 3px; }
+[data-style="neubrutalism"] .mh-switch input:checked { background: var(--mh-neo-fill); }
+[data-style="neubrutalism"] .mh-switch input:checked::after { left: calc(100% - 1rem - 3px); background: var(--mh-color-neo-ink); }
+
+/* Card: tanpa gradasi; blok warna datar */
+[data-style="neubrutalism"] .mh-card { border-color: var(--mh-neo-ink); }
+[data-style="neubrutalism"] .mh-card--brand { background: var(--mh-color-neo-cyan); color: var(--mh-color-neo-ink); border-color: var(--mh-neo-ink); }
+[data-style="neubrutalism"] .mh-card--brand :where(h1, h2, h3, h4, p) { color: var(--mh-color-neo-ink); }
+[data-style="neubrutalism"] .mh-card--brand .mh-btn--accent { --_bd: var(--mh-color-neo-ink); }
+[data-style="neubrutalism"] .mh-card--inverse { border-color: var(--mh-neo-ink); }
+[data-style="neubrutalism"] .mh-card__footer { border-top-color: var(--mh-neo-ink); }
+[data-style="neubrutalism"] .mh-icon-tile { background: var(--mh-accent); color: var(--mh-color-neo-ink); border: var(--mh-border-width) solid var(--mh-neo-ink); }
+
+/* Badge: stiker kotak monospace */
+[data-style="neubrutalism"] .mh-badge {
+  --_bg: var(--mh-color-neo-sky); --_fg: var(--mh-color-neo-ink);
+  border: var(--mh-border-width) solid var(--mh-neo-ink); border-radius: 4px;
+  font-family: var(--mh-font-family-label); text-transform: uppercase; letter-spacing: 0.03em; font-weight: 700;
+}
+[data-style="neubrutalism"] .mh-badge--accent  { --_bg: var(--mh-color-neo-sun); }
+[data-style="neubrutalism"] .mh-badge--success { --_bg: var(--mh-color-neo-mint); }
+[data-style="neubrutalism"] .mh-badge--warning { --_bg: var(--mh-color-neo-sun-soft); }
+[data-style="neubrutalism"] .mh-badge--danger  { --_bg: var(--mh-color-neo-coral); }
+[data-style="neubrutalism"] .mh-badge--neutral { --_bg: var(--mh-color-neo-white); }
+
+/* Alert & toast */
+[data-style="neubrutalism"] .mh-alert { border: var(--mh-border-width) solid var(--mh-neo-ink); box-shadow: var(--mh-shadow-md); }
+[data-style="neubrutalism"] .mh-alert__title { color: var(--mh-text); }
+[data-style="neubrutalism"] .mh-toast { border: var(--mh-border-width) solid var(--mh-neo-ink); box-shadow: var(--mh-shadow-md); }
+
+/* Progress: bar bergaris */
+[data-style="neubrutalism"] .mh-progress { height: 1rem; border: var(--mh-border-width) solid var(--mh-neo-ink); background: var(--mh-surface); border-radius: 4px; }
+[data-style="neubrutalism"] .mh-progress__bar { border-radius: 0; border-right: var(--mh-border-width) solid var(--mh-neo-ink);
+  background: repeating-linear-gradient(-45deg, var(--mh-color-neo-cyan) 0 8px, var(--mh-color-neo-sky) 8px 16px); }
+
+/* Table */
+[data-style="neubrutalism"] .mh-table-wrap { border-color: var(--mh-neo-ink); }
+[data-style="neubrutalism"] .mh-table th { background: var(--mh-primary-subtle); color: var(--mh-text); font-family: var(--mh-font-family-label); border-bottom-color: var(--mh-neo-ink); }
+[data-style="neubrutalism"] .mh-table tbody tr:hover { background: var(--mh-accent-subtle); }
+
+/* Navigasi */
+[data-style="neubrutalism"] .mh-navbar { background: var(--mh-surface); backdrop-filter: none; border-bottom-color: var(--mh-neo-ink); }
+[data-style="neubrutalism"] .mh-navbar__links a { color: var(--mh-text); border: var(--mh-border-width) solid transparent; }
+[data-style="neubrutalism"] .mh-navbar__links a:hover { background: var(--mh-bg-muted); border-color: var(--mh-neo-ink); }
+[data-style="neubrutalism"] .mh-navbar__links a[aria-current="page"] { background: var(--mh-accent); color: var(--mh-on-accent); border-color: var(--mh-neo-ink); }
+[data-style="neubrutalism"] .mh-tabs { border-bottom: var(--mh-border-width) solid var(--mh-neo-ink); gap: var(--mh-space-2); }
+[data-style="neubrutalism"] .mh-tab { border: var(--mh-border-width) solid transparent; border-bottom: 0; border-radius: 6px 6px 0 0; margin-bottom: 0; color: var(--mh-text); }
+[data-style="neubrutalism"] .mh-tab:hover { background: var(--mh-bg-muted); border-color: var(--mh-neo-ink); }
+[data-style="neubrutalism"] .mh-tab[aria-selected="true"] { background: var(--mh-neo-fill); color: var(--mh-on-neo-fill); border-color: var(--mh-neo-ink); }
+[data-style="neubrutalism"] .mh-pagination a { border-color: var(--mh-neo-ink); font-family: var(--mh-font-family-label); font-weight: 700; }
+[data-style="neubrutalism"] .mh-pagination a:hover { color: var(--mh-text); background: var(--mh-bg-muted); }
+[data-style="neubrutalism"] .mh-pagination a[aria-current="page"] { background: var(--mh-neo-fill); color: var(--mh-on-neo-fill); border-color: var(--mh-neo-ink); box-shadow: var(--mh-shadow-sm); }
+[data-style="neubrutalism"] .mh-breadcrumb [aria-current="page"] { background: var(--mh-accent); color: var(--mh-on-accent); padding: 0 0.35em; border-radius: 3px; }
+
+/* Dialog, avatar, tooltip, motif */
+[data-style="neubrutalism"] .mh-dialog { border: 3px solid var(--mh-neo-ink); }
+[data-style="neubrutalism"] .mh-avatar { border: var(--mh-border-width) solid var(--mh-neo-ink); background: var(--mh-accent); color: var(--mh-on-accent); }
+[data-style="neubrutalism"] [data-mh-tooltip]:is(:hover, :focus-visible)::after { border: var(--mh-border-width) solid var(--mh-neo-ink); }
+[data-style="neubrutalism"] .mh-wave-line { height: 10px; width: 5rem; border-radius: 0; border: var(--mh-border-width) solid var(--mh-neo-ink); background: var(--mh-neo-fill); }
+
+/* ---------- Utilitas khas Neubrutalism ---------- */
+/* Blok warna datar ber-border */
+.mh-neo-block { border: var(--mh-border-width, 2px) solid var(--mh-neo-ink); border-radius: var(--mh-card-radius); box-shadow: var(--mh-card-shadow); padding: var(--mh-space-6); color: var(--mh-color-neo-ink); }
+.mh-neo-block--cyan { background: var(--mh-color-neo-cyan); }
+.mh-neo-block--sky  { background: var(--mh-color-neo-sky); }
+.mh-neo-block--sun  { background: var(--mh-color-neo-sun); }
+.mh-neo-block--mint { background: var(--mh-color-neo-mint); }
+.mh-neo-block--white { background: var(--mh-color-neo-white); }
+.mh-neo-block--blue { background: var(--mh-color-neo-blue); color: var(--mh-color-neo-white); }
+.mh-neo-block--ink  { background: var(--mh-color-neo-ink); color: var(--mh-color-neo-paper); }
+.mh-neo-block :where(h1, h2, h3, h4) { color: inherit; }
+/* Stiker miring */
+.mh-neo-sticker { display: inline-block; transform: rotate(-4deg); background: var(--mh-color-neo-sun); color: var(--mh-color-neo-ink); border: var(--mh-border-width, 2px) solid var(--mh-color-neo-ink); box-shadow: 3px 3px 0 0 var(--mh-color-neo-ink); padding: 0.25em 0.7em; font-family: var(--mh-font-family-label); font-weight: 700; font-size: var(--mh-font-size-sm); text-transform: uppercase; }
+/* Stabilo pada kata kunci */
+.mh-neo-highlight { background: var(--mh-color-neo-sun); color: var(--mh-color-neo-ink); padding: 0 0.15em; -webkit-box-decoration-break: clone; box-decoration-break: clone; }
+/* Latar grid kertas */
+.mh-neo-grid-bg { background-color: var(--mh-bg); background-image: linear-gradient(var(--mh-bg-muted) 1px, transparent 1px), linear-gradient(90deg, var(--mh-bg-muted) 1px, transparent 1px); background-size: 32px 32px; }
+@media (prefers-reduced-motion: reduce) { .mh-neo-sticker { transform: none; } }

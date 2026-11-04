@@ -96,3 +96,67 @@ mkdirSync(join(root, 'dist'), { recursive: true });
 writeFileSync(join(root, 'css/tokens.css'), css);
 writeFileSync(join(root, 'dist/tokens.resolved.json'), JSON.stringify(resolved, null, 2) + '\n');
 console.log(`OK: ${Object.keys(flat).length} token dasar, ${Object.keys(resolved.semantic.light).length} token semantik/tema.`);
+
+// ---------------------------------------------------------------------------
+// Design system sekunder: Neubrutalism (tokens/neubrutalism.json)
+// Output: css/themes/neubrutalism.css = token override + themes/neubrutalism/components.css
+// ---------------------------------------------------------------------------
+const neo = JSON.parse(readFileSync(join(root, 'tokens/neubrutalism.json'), 'utf8'));
+const neoFlat = flatten({ color: neo.color });
+const neoRes = (v) => String(v).replace(/\{([^}]+)\}/g, (_, ref) => {
+  if (!(ref in neoFlat)) throw new Error(`[neubrutalism] referensi tidak ditemukan: {${ref}}`);
+  return neoFlat[ref];
+});
+const neoCssVal = (v) => String(v).replace(/\{([^}]+)\}/g, (_, ref) => {
+  if (!(ref in neoFlat)) throw new Error(`[neubrutalism] referensi tidak ditemukan: {${ref}}`);
+  return `var(${varName(ref)})`;
+});
+const block = (obj, indent) => Object.entries(flatten(obj)).map(([k, v]) => `${indent}--${PREFIX}-${k}: ${neoCssVal(v)};`).join('\n');
+const lightSemanticKeys = Object.keys(flatten(semantic.light));
+for (const k of Object.keys(flatten(neo.semantic.light))) {
+  if (!/(^|-)neo-/.test(k) && !lightSemanticKeys.includes(k)) throw new Error(`[neubrutalism] token semantik tidak dikenal: ${k}`);
+}
+
+const S = '[data-style="neubrutalism"]';
+const neoBase = Object.entries(neoFlat).map(([k, v]) => `  ${varName(k)}: ${v};`).join('\n');
+const neoCss = `/* MaulanaHRP — tema Neubrutalism (design system sekunder)
+ * DIBANGKITKAN OTOMATIS dari tokens/neubrutalism.json + themes/neubrutalism/components.css.
+ * Pakai: muat SETELAH tokens.css & components.css, lalu pasang data-style="neubrutalism"
+ * di <html> (seluruh halaman) atau di elemen mana pun (hanya bagian itu).
+ */
+
+${S} {
+${neoBase}
+  --${PREFIX}-font-family-label: ${neo.font.label.$value};
+
+  /* Semantic & bentuk — light */
+${block(neo.semantic.light, '  ')}
+${block(neo.shape.light, '  ')}
+}
+
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"])${S},
+  :root:not([data-theme="light"]) ${S} {
+${block(neo.semantic.dark, '    ')}
+${block(neo.shape.dark, '    ')}
+  }
+}
+
+:root[data-theme="dark"]${S},
+:root[data-theme="dark"] ${S} {
+${block(neo.semantic.dark, '  ')}
+${block(neo.shape.dark, '  ')}
+}
+
+${readFileSync(join(root, 'themes/neubrutalism/components.css'), 'utf8')}`;
+
+mkdirSync(join(root, 'css/themes'), { recursive: true });
+writeFileSync(join(root, 'css/themes/neubrutalism.css'), neoCss);
+const neoResolved = { semantic: {} };
+for (const mode of ['light', 'dark']) {
+  // dark mewarisi light untuk token yang tidak ditimpa
+  const merged = { ...flatten(neo.semantic.light), ...(mode === 'dark' ? flatten(neo.semantic.dark) : {}) };
+  neoResolved.semantic[mode] = Object.fromEntries(Object.entries(merged).map(([k, v]) => [k, neoRes(v)]));
+}
+writeFileSync(join(root, 'dist/neubrutalism.resolved.json'), JSON.stringify(neoResolved, null, 2) + '\n');
+console.log(`OK: tema neubrutalism (${Object.keys(neoResolved.semantic.light).length} token semantik).`);
