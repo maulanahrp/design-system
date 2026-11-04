@@ -2,14 +2,15 @@
 Vektorisasi badge MaulanaHRP dari PNG asli TANPA menggambar ulang.
 
 Bentuk diambil langsung dari piksel (potrace pada upscale 3x), warna diambil
-dari sampel piksel asli. Hasil:
-  assets/logo/maulanahrp-badge-original.svg        -> persis (termasuk tekstur bintik)
-  assets/logo/maulanahrp-badge-original-clean.svg  -> sama, bintik putih di cincin dihapus
+dari sampel piksel asli. Hasil: assets/logo/source/badge-trace.json berisi bagian-bagian logo (path SVG
+pada koordinat PNG asli, gradien, warna, kotak batas). Semua varian logo
+disusun dari file ini oleh scripts/build-logos.mjs (npm run build:logos).
 
 Dependensi (jalankan di venv terpisah):
   pip install pillow numpy scikit-image scipy potracer
   python scripts/trace-badge.py
 """
+import json
 import os
 import sys
 
@@ -21,13 +22,13 @@ from skimage import filters, measure, morphology, segmentation
 
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 SRC = os.path.join(ROOT, "assets/logo/maulanahrp-badge.png")
-OUT_DIR = os.path.join(ROOT, "assets/logo")
+OUT = os.path.join(ROOT, "assets/logo/source/badge-trace.json")
 S = 3  # faktor upscale untuk tracing
 
 # Kotak area mark gelombang (koordinat 1x). Teks & cincin ada di luar kotak ini.
 MX0, MY0, MX1, MY1 = 175, 210, 695, 455
 # Pita vertikal teks "Tech Solution" (koordinat 1x)
-SUB_X0, SUB_Y0, SUB_X1, SUB_Y1 = 150, 555, 730, 625
+SUB_X0, SUB_Y0, SUB_X1, SUB_Y1 = 190, 563, 690, 618
 
 
 def load():
@@ -94,13 +95,18 @@ def gradient(gid, ys, xs, cols, nstops=7):
         stops.append((off, hexc(np.median(cols[sel], 0))))
     cx, cy = xs.mean(), ys.mean()
     tc = cx * d[0] + cy * d[1]
-    p1 = (cx + (lo - tc) * d[0], cy + (lo - tc) * d[1])
-    p2 = (cx + (hi - tc) * d[0], cy + (hi - tc) * d[1])
-    s = "".join(f'<stop offset="{o:.3f}" stop-color="{c}"/>' for o, c in stops)
-    return (
-        f'<linearGradient id="{gid}" gradientUnits="userSpaceOnUse" '
-        f'x1="{p1[0]:.1f}" y1="{p1[1]:.1f}" x2="{p2[0]:.1f}" y2="{p2[1]:.1f}">{s}</linearGradient>'
-    )
+    return {
+        "id": gid,
+        "x1": round(cx + (lo - tc) * d[0], 1), "y1": round(cy + (lo - tc) * d[1], 1),
+        "x2": round(cx + (hi - tc) * d[0], 1), "y2": round(cy + (hi - tc) * d[1], 1),
+        "stops": [[round(o, 3), c] for o, c in stops],
+    }
+
+
+def bbox(mask):
+    ys, xs = np.nonzero(mask)
+    return [round(xs.min() / S, 1), round(ys.min() / S, 1),
+            round((xs.max() + 1) / S, 1), round((ys.max() + 1) / S, 1)]
 
 
 def pad(m, H, W):  # mask sub-kotak -> mask penuh
@@ -159,14 +165,19 @@ def build_mark(rgb, rgb3, H, W):
     band_dark = wave & ~band_light_ext
     band_light = wave & band_light_ext
     defs = []
-    for gid, m in (("g-wave-dark", band_dark), ("g-wave-light", band_light),
-                   ("g-conn-l", conn_l), ("g-conn-r", conn_r)):
+    for gid, m in (("wave-dark", band_dark), ("wave-light", band_light),
+                   ("conn-l", conn_l), ("conn-r", conn_r)):
         ys, xs, cols = core_pixels(m)
         defs.append(gradient(gid, ys, xs, cols))
 
     mark3 = pad(wave | conn_l | conn_r, H, W)
-    return (mark3, defs, trace(pad(wave, H, W)), trace(pad(band_light_ext, H, W)),
-            trace(pad(conn_l, H, W)), trace(pad(conn_r, H, W)))
+    parts = {
+        "wave": trace(pad(wave, H, W)),
+        "waveLight": trace(pad(band_light_ext, H, W)),
+        "connL": trace(pad(conn_l, H, W)),
+        "connR": trace(pad(conn_r, H, W)),
+    }
+    return mark3, defs, parts
 
 
 def main():
@@ -192,7 +203,7 @@ def main():
                  & (xx3 >= SUB_X0 * S) & (xx3 < SUB_X1 * S))
 
     # ---- (mark dihitung dulu supaya navy = gelap minus mark, bukan minus kotak)
-    mark3, defs, d_wave, d_light, d_cl, d_cr = build_mark(rgb, rgb3, H, W)
+    mark3, defs, mark_parts = build_mark(rgb, rgb3, H, W)
     navy_all = dark & ~morphology.dilation(mark3, morphology.disk(2 * S))
     navy = navy_all & ~sub_zone3
     subt = navy_all & sub_zone3
@@ -208,38 +219,48 @@ def main():
     closed = morphology.closing(navy_clean, morphology.disk(2 * S))
     navy_clean = np.where(ring_zone, closed & disc, navy_clean)
 
-    d_disc = trace(disc, turdsize=200)
-    d_sub = trace(subt)
-    navy_hex = hexc(navy_col)
+    # pisah cincin (komponen besar melingkar) dari judul
+    def split_rings(m):
+        lab = measure.label(m, connectivity=2)
+        rings = np.zeros_like(m)
+        for r in measure.regionprops(lab):
+            if r.bbox[2] - r.bbox[0] > 500 * S:
+                rings |= lab == r.label
+        return rings
+
+    rings_tex = split_rings(navy)
+    rings_clean = split_rings(navy_clean)
+    title = navy & ~rings_tex
 
     # viewBox persegi rapat di sekitar badge
     ys, xs = np.nonzero(alpha > 0.02)
     x0, x1, y0, y1 = xs.min(), xs.max() + 1, ys.min(), ys.max() + 1
-    side = max(x1 - x0, y1 - y0)
-    vx = (x0 + x1 - side) / 2
-    vy = (y0 + y1 - side) / 2
-
-    for name, nmask, ts in (("maulanahrp-badge-original.svg", navy, 2),
-                            ("maulanahrp-badge-original-clean.svg", navy_clean, 2)):
-        d_navy = trace(nmask, turdsize=ts)
-        svg = (
-            f'<svg xmlns="http://www.w3.org/2000/svg" viewBox="{vx:g} {vy:g} {side} {side}" '
-            f'role="img" aria-label="MaulanaHRP Tech Solution">'
-            f'<title>MaulanaHRP Tech Solution</title>'
-            f'<defs>{"".join(defs)}<clipPath id="clip-wave"><path d="{d_wave}"/></clipPath></defs>'
-            f'<path fill="#FFFFFF" d="{d_disc}"/>'
-            f'<path fill="{navy_hex}" fill-rule="evenodd" d="{d_navy}"/>'
-            f'<path fill="{hexc(sub_col)}" fill-rule="evenodd" d="{d_sub}"/>'
-            f'<path fill="url(#g-wave-dark)" fill-rule="evenodd" d="{d_wave}"/>'
-            f'<path fill="url(#g-wave-light)" fill-rule="evenodd" clip-path="url(#clip-wave)" d="{d_light}"/>'
-            f'<path fill="url(#g-conn-l)" fill-rule="evenodd" d="{d_cl}"/>'
-            f'<path fill="url(#g-conn-r)" fill-rule="evenodd" d="{d_cr}"/>'
-            f"</svg>\n"
-        )
-        with open(os.path.join(OUT_DIR, name), "w") as fh:
-            fh.write(svg)
-        print(name, len(svg), "bytes")
-    print("navy", navy_hex, "subjudul", hexc(sub_col))
+    side = int(max(x1 - x0, y1 - y0))
+    data = {
+        "source": "assets/logo/maulanahrp-badge.png",
+        "note": "Dibangkitkan oleh scripts/trace-badge.py. Jangan diedit manual.",
+        "badgeBox": [float((x0 + x1 - side) / 2), float((y0 + y1 - side) / 2), side, side],
+        "colors": {"navy": hexc(navy_col), "subtitle": hexc(sub_col)},
+        "gradients": defs,
+        "paths": {
+            "disc": trace(disc, turdsize=200),
+            "rings": trace(rings_clean),
+            "ringsTextured": trace(rings_tex),
+            "title": trace(title),
+            "subtitle": trace(subt),
+            **mark_parts,
+        },
+        "boxes": {
+            "mark": bbox(mark3),
+            "title": bbox(title),
+            "subtitle": bbox(subt),
+            "rings": bbox(rings_clean),
+        },
+    }
+    os.makedirs(os.path.dirname(OUT), exist_ok=True)
+    with open(OUT, "w") as fh:
+        json.dump(data, fh, indent=1)
+    print("OK", OUT, os.path.getsize(OUT), "bytes", data["colors"], data["boxes"])
 
 
 if __name__ == "__main__":

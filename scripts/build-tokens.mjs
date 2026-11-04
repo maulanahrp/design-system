@@ -11,7 +11,7 @@ const PREFIX = 'mh';
 
 const isLeaf = (n) => n && typeof n === 'object' && '$value' in n;
 
-// Ratakan pohon token -> { 'color.navy.800': '#1C366B', ... }
+// Ratakan pohon token -> { 'color.navy.800': '#1D3668', ... }
 function flatten(node, path = [], out = {}) {
   for (const [k, v] of Object.entries(node)) {
     if (k.startsWith('$')) continue;

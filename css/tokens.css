@@ -15,7 +15,7 @@
   --mh-color-navy-500: #3B6CA7;
   --mh-color-navy-600: #2E5C9C;
   --mh-color-navy-700: #274B91;
-  --mh-color-navy-800: #1C366B;
+  --mh-color-navy-800: #1D3668;
   --mh-color-navy-900: #142852;
   --mh-color-navy-950: #0C1A38;
   --mh-color-cyan-50: #EDF9FB;
@@ -50,7 +50,7 @@
   --mh-color-danger-50: #FDECEB;
   --mh-color-danger-500: #E0483F;
   --mh-color-danger-700: #B3302A;
-  --mh-color-gradient-brand: linear-gradient(135deg, #68C0D2 0%, #3B6CA7 55%, #1C366B 100%);
+  --mh-color-gradient-brand: linear-gradient(135deg, #68C0D2 0%, #3B6CA7 55%, #1D3668 100%);
   --mh-color-gradient-wave: linear-gradient(90deg, #68C0D2 0%, #3B6CA7 100%);
   --mh-font-family-heading: 'Montserrat', 'Segoe UI', system-ui, -apple-system, sans-serif;
   --mh-font-family-body: 'Inter', 'Segoe UI', system-ui, -apple-system, sans-serif;

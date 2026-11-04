@@ -5,7 +5,7 @@
       "ink":       { "$value": "#0C1A38", "$description": "Tinta: border, bayangan, teks. Sama dengan navy-950." },
       "paper":     { "$value": "#F3F8FB", "$description": "Latar halaman (putih dingin)." },
       "white":     { "$value": "#FFFFFF" },
-      "navy":      { "$value": "#1C366B", "$description": "Navy brand." },
+      "navy":      { "$value": "#1D3668", "$description": "Navy brand." },
       "cyan":      { "$value": "#68C0D2", "$description": "Cyan brand: fill utama button & blok." },
       "sky":       { "$value": "#A8E1EB", "$description": "Cyan muda: blok sekunder, tab aktif." },
       "blue":      { "$value": "#3B6CA7", "$description": "Wave blue: blok dekoratif, teks putih." },

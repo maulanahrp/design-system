@@ -45,7 +45,7 @@
 .slide--navy .slide__foot, .slide--gradient .slide__foot { color: rgba(255, 255, 255, 0.75); }
 
 /* Motif gelombang dekoratif */
-.wave-motif { position: absolute; right: calc(var(--u) * -60); bottom: calc(var(--u) * -30); width: calc(var(--u) * 1000); height: auto; aspect-ratio: 1100 / 420; opacity: 0.18; pointer-events: none; }
+.wave-motif { position: absolute; right: calc(var(--u) * -60); bottom: calc(var(--u) * -30); width: calc(var(--u) * 1000); height: auto; aspect-ratio: 474.7 / 203.4; /* mh-motif */ opacity: 0.18; pointer-events: none; }
 
 /* Grid utilitas */
 .cols { display: grid; gap: calc(var(--u) * 64); grid-template-columns: repeat(var(--n, 2), 1fr); flex: 1; align-items: start; }

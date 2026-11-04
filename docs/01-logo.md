@@ -7,17 +7,26 @@ Makna visualnya: data yang mengalir dan sistem yang saling terhubung.
 
 | Varian | File | Kapan dipakai |
 |---|---|---|
-| Horizontal (utama) | `assets/logo/maulanahrp-horizontal-color.svg` | Header web, kop surat, footer deck, email signature. **Default untuk hampir semua kebutuhan.** |
+| **Badge (master)** | `assets/logo/maulanahrp-badge-color.svg` | **Logo resmi**, persis logo asli (tanpa bintik tekstur). Stiker, cover deck, sertifikat, foto profil media sosial, segel dokumen. |
+| Badge putih | `…-badge-white.svg` | Badge satu warna putih (tanpa piringan) di atas navy, foto gelap, atau gradasi. |
+| Horizontal | `…-horizontal-color.svg` | Header web, kop surat, footer deck, email signature. **Default untuk ruang melebar.** |
 | Horizontal putih | `…-horizontal-white.svg` | Di atas latar navy, foto gelap, atau gradasi brand. |
 | Horizontal navy / hitam | `…-horizontal-navy.svg`, `…-horizontal-black.svg` | Cetak 1 warna, stempel, fax/fotokopi, merchandise. |
-| Badge | `…-badge-color.svg`, `…-badge-white.svg` | Stiker, cover deck, sertifikat, foto profil media sosial, segel dokumen. |
-| **Badge asli (vektor)** | `…-badge-original.svg` | **Master logo.** Vektorisasi langsung dari PNG asli (bentuk & warna tidak diubah, termasuk tekstur bintik). Untuk cetak & semua ukuran. |
-| Badge asli tanpa tekstur | `…-badge-original-clean.svg` | Identik dengan master, hanya bintik putih di cincin dihapus. Untuk ukuran kecil/cetak bordir. |
-| Badge asli (raster) | `…-badge.png` | Arsip sumber vektorisasi (878px). |
 | Mark | `…-mark-color.svg` (+ navy/white/black) | Ruang sempit: avatar, loading, watermark, ikon fitur. |
 | App icon | `…-app-icon.svg`, `assets/favicon/*` | Favicon, ikon aplikasi, PWA. |
+| Arsip bertekstur | `…-badge-original.svg` | Logo asli lengkap dengan bintik putih di cincin. Hanya arsip. |
+| Arsip raster | `…-badge.png` | Sumber vektorisasi (878px). |
 
-> `…-badge-original.svg` dibuat ulang dengan `scripts/trace-badge.py` (lihat header skrip). Varian lain (badge-color, mark, horizontal) masih **interpretasi vektor** dari logo raster asli. Jika file vektor resmi tersedia, ganti di `scripts/build-logos.mjs` lalu jalankan `npm run build:logos`.
+### Asal-usul file
+Semua varian **tidak digambar ulang**. Bentuk dan warna diambil langsung dari logo asli:
+
+1. `scripts/trace-badge.py` memvektorisasi `maulanahrp-badge.png` (potrace pada upscale 3x, warna disampel dari piksel asli) menjadi `assets/logo/source/badge-trace.json`: cincin, judul, subjudul, 2 pita gelombang, dan 2 konektor.
+2. `npm run build:logos` menyusun badge, mark, lockup horizontal, app icon, favicon, PNG, dan motif dekoratif dari bagian-bagian itu.
+
+Lockup horizontal hanya **menata ulang** bagian asli: mark di kiri, blok teks asli (posisi judul terhadap subjudul tetap seperti di badge) di kanan.
+
+Warna logo hasil sampel: navy `#1D3668` (cincin, "MaulanaHRP"), navy gelap `#1C2A45` ("Tech Solution"), gelombang & konektor bergradasi cyan → biru.
+Jika file vektor resmi dari desainer tersedia, file itu lebih diutamakan daripada hasil vektorisasi.
 
 ## Area bebas (clear space)
 Sisakan ruang kosong di semua sisi minimal **setinggi node bulat besar** pada mark (≈ ¼ tinggi mark).
@@ -36,8 +45,8 @@ Untuk badge: minimal 8% dari diameternya.
 ## Ukuran minimum
 | Varian | Digital | Cetak |
 |---|---|---|
-| Horizontal | lebar 120px | lebar 30mm |
-| Badge | diameter 64px | diameter 18mm |
+| Horizontal | lebar 180px | lebar 45mm |
+| Badge | diameter 96px | diameter 25mm |
 | Mark | lebar 24px | lebar 8mm |
 
 Di bawah ukuran tersebut, tagline "Tech Solution" tidak terbaca. Gunakan mark saja.
@@ -53,5 +62,6 @@ Di bawah ukuran tersebut, tagline "Tech Solution" tidak terbaca. Gunakan mark sa
 - ❌ Merentangkan, memiringkan, memutar, atau memberi efek (shadow, glow, outline, 3D).
 - ❌ Mengganti font wordmark atau menyusun ulang posisi mark dan teks.
 - ❌ Menaruh versi color di atas latar navy/gelap (kontras hilang).
-- ❌ Memakai badge raster bertekstur di bawah 200px.
+- ❌ Memakai versi arsip bertekstur (`-badge-original`) untuk kebutuhan sehari-hari.
+- ❌ Menggambar ulang mark atau mengetik ulang wordmark dengan font. Pakai file dari `assets/logo/`.
 - ❌ Menambah elemen lain di dalam area bebas.

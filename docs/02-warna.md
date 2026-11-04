@@ -7,7 +7,7 @@ Warna brand diambil dari logo; kode HEX adalah **sampel dari file raster**, buka
 
 | Nama | HEX | Token | Peran |
 |---|---|---|---|
-| **Navy** | `#1C366B` | `--mh-color-navy-800` | Warna identitas. Heading, latar gelap brand, wordmark. |
+| **Navy** | `#1D3668` | `--mh-color-navy-800` | Warna identitas. Heading, latar gelap brand, wordmark. |
 | **Blue** | `#274B91` | `--mh-color-navy-700` | Warna aksi utama (button primary) di mode terang. |
 | **Wave Blue** | `#3B6CA7` | `--mh-color-navy-500` | Ilustrasi, grafik, gradasi. |
 | **Cyan** | `#68C0D2` | `--mh-color-cyan-400` | Aksen: highlight, focus ring, badge, garis dekoratif. |

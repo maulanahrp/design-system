@@ -31,11 +31,11 @@ Template contoh: `templates/deck.html` (10 layout, 16:9). Buka di browser → **
 | Footer | logo horizontal tinggi 40px di kiri bawah (48px dari tepi bawah); nomor slide Inter 18px abu `#627189` di kanan |
 | Aksen | strip gradasi cyan→blue 12×180px di pojok kiri atas (slide konten) |
 | Kicker / overline | Inter SemiBold 22px, kapital, spasi huruf 12%, `#276F82` (di latar navy: `#7FD0DF`) |
-| Judul slide | Montserrat Bold 56px, `#1C366B` |
+| Judul slide | Montserrat Bold 56px, `#1D3668` |
 | Judul cover | Montserrat Bold 96px, putih |
 | Isi | Inter Regular 30px (minimal 24px), `#171D2A` |
 | Bullet | lingkaran berongga cyan `#68C0D2` |
-| Warna tema PowerPoint | Dark 1 `#171D2A` · Light 1 `#FFFFFF` · Dark 2 `#1C366B` · Light 2 `#EEF3FA` · Accent 1 `#274B91` · Accent 2 `#68C0D2` · Accent 3 `#5A7FBA` · Accent 4 `#276F82` · Accent 5 `#95A3B8` · Accent 6 `#E59A1A` · Hyperlink `#2E5C9C` |
+| Warna tema PowerPoint | Dark 1 `#171D2A` · Light 1 `#FFFFFF` · Dark 2 `#1D3668` · Light 2 `#EEF3FA` · Accent 1 `#274B91` · Accent 2 `#68C0D2` · Accent 3 `#5A7FBA` · Accent 4 `#276F82` · Accent 5 `#95A3B8` · Accent 6 `#E59A1A` · Hyperlink `#2E5C9C` |
 | Font tema | Heading: Montserrat · Body: Inter (fallback: Segoe UI / Arial) |
 
 Aset untuk master: `assets/logo/maulanahrp-horizontal-color.png` / `-white.png` (1200px) dan motif gelombang di `templates/deck.html` (symbol `#wave`).

@@ -33,7 +33,7 @@ scripts/            Build tokens, cek kontras WCAG, build logo
 ## Ringkasan brand
 | | |
 |---|---|
-| Warna utama | Navy `#1C366B` · Blue `#274B91` · Cyan `#68C0D2` |
+| Warna utama | Navy `#1D3668` · Blue `#274B91` · Cyan `#68C0D2` |
 | Font | Montserrat (heading) + Inter (body) |
 | Radius | 8px kontrol, 12px card |
 | Kepribadian | Ahli yang membumi: jelas, percaya diri, solutif |
@@ -62,7 +62,7 @@ Jangan mengedit `css/tokens.css` atau `dist/` secara manual; keduanya dibangkitk
 
 ## Catatan
 - Warna brand diambil dari sampel logo raster. Ganti dengan kode resmi bila tersedia.
-- Master logo: `assets/logo/maulanahrp-badge-original.svg`, vektorisasi langsung dari PNG asli tanpa mengubah bentuk/warna (`scripts/trace-badge.py`). Varian mark/horizontal masih interpretasi dan menunggu konfirmasi.
+- Logo resmi: `assets/logo/maulanahrp-badge-color.svg`. Semua varian logo disusun dari vektorisasi langsung PNG asli (`scripts/trace-badge.py` → `npm run build:logos`), bentuk dan warna tidak digambar ulang.
 - Data perusahaan di template (alamat, NPWP, rekening, kontak) masih berupa placeholder `[kurung siku]`.
 
 ## Design System di claude.ai

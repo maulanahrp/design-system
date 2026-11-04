@@ -17,7 +17,7 @@ Bahasa visual **MaulanaHRP Tech Solution**, perusahaan solusi teknologi (web, ap
 
 - Proporsi **60-30-10**: 60% netral (`mh-bg`, `mh-surface`), 30% navy (`mh-color-navy-800`, `mh-primary`), 10% cyan (`mh-accent`).
 - Komponen dan halaman hanya memakai **token semantik** (`mh-bg`, `mh-text`, `mh-primary`…), bukan skala mentah `mh-color-*`. Dengan begitu, tema Gelap berjalan otomatis.
-- `mh-color-navy-800` (#1C366B) adalah warna identitas: wordmark, heading (`mh-heading`), latar section/slide gelap, kop dokumen.
+- `mh-color-navy-800` (#1D3668) adalah warna identitas: wordmark, heading (`mh-heading`), latar section/slide gelap, kop dokumen.
 - Aksi utama memakai `mh-primary` dengan teks `mh-on-primary`. Satu button primary per area.
 - **Cyan adalah aksen, bukan warna teks.** `mh-color-cyan-400` di atas putih hanya 2.1:1. Untuk teks cyan pakai `mh-accent-strong`; untuk teks di atas cyan pakai `mh-on-accent`.
 - Gradasi brand (`--mh-color-gradient-brand`, cyan → wave blue → navy, 135°) hanya untuk hero, cover deck, dan satu card unggulan per layar. Teks di atasnya putih, minimal 18px bold. Garis aksen tipis memakai `--mh-color-gradient-wave`.
@@ -46,11 +46,11 @@ Bahasa visual **MaulanaHRP Tech Solution**, perusahaan solusi teknologi (web, ap
 ## Logo & motif
 
 - Pakai **horizontal** (`maulanahrp-horizontal-color.svg`) sebagai default: header web, kop surat, footer deck. Di atas navy, gradasi, atau foto gelap pakai `maulanahrp-horizontal-white.svg`.
-- **Badge** (`maulanahrp-badge-color.svg`) untuk stiker, cover, sertifikat, dan avatar media sosial. Badge raster bertekstur (`maulanahrp-badge.png`) hanya arsip; jangan dipakai di bawah 200px.
+- **Badge** (`maulanahrp-badge-color.svg`) adalah **logo resmi**, persis logo asli tanpa bintik tekstur. Untuk stiker, cover, sertifikat, dan avatar media sosial. Semua file logo adalah vektorisasi langsung logo asli; jangan menggambar ulang mark atau mengetik ulang wordmark.
 - **Mark** (`maulanahrp-mark-*.svg`) untuk ruang sempit: avatar, loading, watermark. **App icon** untuk favicon & PWA.
-- Area bebas di semua sisi ≥ tinggi node bulat pada mark. Ukuran minimum: horizontal 120px / 30mm, badge 64px / 18mm, mark 24px / 8mm.
+- Area bebas di semua sisi ≥ tinggi node bulat pada mark. Ukuran minimum: horizontal 180px / 45mm, badge 96px / 25mm, mark 24px / 8mm.
 - Jangan: mengubah warna mark, merentang, memutar, memberi shadow/glow, menyusun ulang mark & teks, atau menaruh versi color di atas latar gelap.
-- Motif khas: **garis gelombang + node** dari logo. Pakai sebagai dekorasi tipis (opacity 10–20%) di hero, cover, dan slide pembatas, atau sebagai garis pendek `.mh-wave-line` di bawah judul/statistik.
+- Motif khas: **mark asli satu warna** (gelombang + node).  Pakai sebagai dekorasi tipis (opacity 10–20%) di hero, cover, dan slide pembatas, atau sebagai garis pendek `.mh-wave-line` di bawah judul/statistik.
 
 ## Ikonografi
 

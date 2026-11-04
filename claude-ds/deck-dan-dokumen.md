@@ -14,7 +14,7 @@
 - Grafik batang: satu batang sorotan `mh-color-navy-700`, sisanya `mh-color-navy-300`.
 - Timeline: titik bernomor bercincin `mh-color-navy-700`, garis penghubung gradasi wave.
 - Layout baku: Cover · Agenda · Pembatas bagian · Konten + gambar · Perbandingan (abu muda vs navy) · Angka kunci · Grafik · Proses · Kutipan · Penutup/kontak.
-- Warna tema PowerPoint: Dark 1 `#171D2A`, Light 1 `#FFFFFF`, Dark 2 `#1C366B`, Light 2 `#EEF3FA`, Accent 1 `#274B91`, Accent 2 `#68C0D2`, Accent 3 `#5A7FBA`, Accent 4 `#276F82`, Accent 5 `#95A3B8`, Accent 6 `#E59A1A`, Hyperlink `#2E5C9C`.
+- Warna tema PowerPoint: Dark 1 `#171D2A`, Light 1 `#FFFFFF`, Dark 2 `#1D3668`, Light 2 `#EEF3FA`, Accent 1 `#274B91`, Accent 2 `#68C0D2`, Accent 3 `#5A7FBA`, Accent 4 `#276F82`, Accent 5 `#95A3B8`, Accent 6 `#E59A1A`, Hyperlink `#2E5C9C`.
 - Transisi cukup *fade* ≤ 300ms. Tanpa clip-art dan WordArt.
 
 ## Dokumen A4 (penawaran, invoice, surat)
