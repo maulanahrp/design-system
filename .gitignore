@@ -1,0 +1,15 @@
+# Dependencies & build cache
+node_modules/
+.cache/
+
+# OS / editor
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/
+
+# Kredensial — jangan pernah di-commit
+.env
+.env.*
+*.pem
+*.key
