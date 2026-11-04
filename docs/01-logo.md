@@ -11,11 +11,13 @@ Makna visualnya: data yang mengalir dan sistem yang saling terhubung.
 | Horizontal putih | `…-horizontal-white.svg` | Di atas latar navy, foto gelap, atau gradasi brand. |
 | Horizontal navy / hitam | `…-horizontal-navy.svg`, `…-horizontal-black.svg` | Cetak 1 warna, stempel, fax/fotokopi, merchandise. |
 | Badge | `…-badge-color.svg`, `…-badge-white.svg` | Stiker, cover deck, sertifikat, foto profil media sosial, segel dokumen. |
-| Badge asli (raster) | `…-badge.png` | Arsip. Bertekstur dan hanya 878px; **jangan** dipakai untuk cetak besar atau ukuran kecil. |
+| **Badge asli (vektor)** | `…-badge-original.svg` | **Master logo.** Vektorisasi langsung dari PNG asli (bentuk & warna tidak diubah, termasuk tekstur bintik). Untuk cetak & semua ukuran. |
+| Badge asli tanpa tekstur | `…-badge-original-clean.svg` | Identik dengan master, hanya bintik putih di cincin dihapus. Untuk ukuran kecil/cetak bordir. |
+| Badge asli (raster) | `…-badge.png` | Arsip sumber vektorisasi (878px). |
 | Mark | `…-mark-color.svg` (+ navy/white/black) | Ruang sempit: avatar, loading, watermark, ikon fitur. |
 | App icon | `…-app-icon.svg`, `assets/favicon/*` | Favicon, ikon aplikasi, PWA. |
 
-> Mark gelombang adalah **interpretasi vektor** dari logo raster asli. Jika file vektor resmi tersedia, ganti di `scripts/build-logos.mjs` lalu jalankan `npm run build:logos`.
+> `…-badge-original.svg` dibuat ulang dengan `scripts/trace-badge.py` (lihat header skrip). Varian lain (badge-color, mark, horizontal) masih **interpretasi vektor** dari logo raster asli. Jika file vektor resmi tersedia, ganti di `scripts/build-logos.mjs` lalu jalankan `npm run build:logos`.
 
 ## Area bebas (clear space)
 Sisakan ruang kosong di semua sisi minimal **setinggi node bulat besar** pada mark (≈ ¼ tinggi mark).

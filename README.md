@@ -62,7 +62,7 @@ Jangan mengedit `css/tokens.css` atau `dist/` secara manual; keduanya dibangkitk
 
 ## Catatan
 - Warna brand diambil dari sampel logo raster. Ganti dengan kode resmi bila tersedia.
-- Mark gelombang SVG adalah interpretasi vektor dari logo asli (`assets/logo/maulanahrp-badge-original.webp`).
+- Master logo: `assets/logo/maulanahrp-badge-original.svg`, vektorisasi langsung dari PNG asli tanpa mengubah bentuk/warna (`scripts/trace-badge.py`). Varian mark/horizontal masih interpretasi dan menunggu konfirmasi.
 - Data perusahaan di template (alamat, NPWP, rekening, kontak) masih berupa placeholder `[kurung siku]`.
 
 ## Design System di claude.ai
