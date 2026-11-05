@@ -77,3 +77,10 @@ lalu publish folder `project/` itu ke artifact di atas.
 
 Versi Neubrutalism: https://claude.ai/artifact/GQvrDjXNbAgA5PinPo1mo3 (build: `npm run build:claude-ds-neo -- <folder-output>`; konten khusus di `claude-ds-neo/`, ID aset di `scripts/claude-ds-neo-assets.json`).
  Konten khusus claude.ai (brand book, README & preview komponen, cover) ada di `claude-ds/`. ID aset logo yang sudah diunggah ada di `scripts/claude-ds-assets.json`.
+
+## Skill Claude Code (untuk proyek lain)
+`claude-skill/SKILL.md` adalah ringkasan design system ini dalam bentuk skill Claude Code. Skill ini dimuat otomatis setiap kali Claude mengerjakan materi bermerek MaulanaHRP di proyek mana pun. Pasang sekali per host:
+```bash
+ln -sfn "$PWD/claude-skill" ~/.claude/skills/maulanahrp-design-system
+```
+Karena berupa symlink, mengedit `claude-skill/SKILL.md` langsung berlaku. Perbarui skill bila aturan di `docs/` berubah.
